@@ -329,10 +329,10 @@
                                     <a href="" data-target="#tab1" data-toggle="tab" class="active nav-link">Component</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" data-target="#tab2" data-toggle="tab" class="nav-link">Pipeline</a>
+                                    <a href="" data-target="#tab2" data-toggle="tab" class="nav-link">Component Relations</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" data-target="#tab3" data-toggle="tab" class="nav-link">Component Relations</a>
+                                    <a href="" data-target="#tab3" data-toggle="tab" class="nav-link">Pipeline</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="" data-target="#tab4" data-toggle="tab" class="nav-link">Health Check</a>
@@ -349,38 +349,35 @@
                                             <p>
                                                 Each data processing step is identified as a process. Each stage the data goes through, like ingestion, processed and report is identified as a component. Each type of component has expected behaviour and quality check types in Dragonfly. 
                                             </p>
-                                            <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                                         </div>
                                         <div class="col-lg-5 col-md-12 thumb">
-                                            <img src="assets/img/illustration/7.png" alt="Thumb">
+                                            <img src="assets/img/illustration/concepts-component.png" alt="Thumb">
                                         </div>
                                     </div>
                                 </div>
                                 <div id="tab2" class="tab-pane fade">
                                     <div class="row align-center">
                                         <div class="col-lg-7 col-md-12 info">
-                                            <h3>Represents your data transformation process, composed of various components</h3>
+                                            <h3>Components interconnect based on dependency order to ensure smooth data flow</h3>
                                             <p>
-                                                A pipeline is a logical representation of the data processing pipeline, represented as a DAG. Pipelines in Dragonfly are more nuanced than those in orchestration tools like Apache Airflow, in the sense that they also represent logica groups and stages.
+                                                Relationships between the components show the interdependence of the components fot the purpose of calculating the quality. This is by nature the inverse order of execution represented by the orchestrator tools like Apache Airflow.
                                             </p>
-                                            <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                                         </div>
                                         <div class="col-lg-5 col-md-12 thumb">
-                                            <img src="assets/img/illustration/7.png" alt="Thumb">
+                                            <img src="assets/img/illustration/concepts-component-relations.png" alt="Thumb">
                                         </div>
                                     </div>
                                 </div>
                                 <div id="tab3" class="tab-pane fade">
                                     <div class="row align-center">
                                         <div class="col-lg-7 col-md-12 info">
-                                            <h3>Components interconnect based on dependency order to ensure smooth data flow</h3>
+                                            <h3>Represents your data transformation process, composed of various components</h3>
                                             <p>
-                                                Relationships between the components show the interdependence of the components fot the purpose of calculating the quality. This is by nature the inverse order of execution represented by the orchestrator tools like Apache Airflow.
+                                                A pipeline is a logical representation of the data processing pipeline, represented as a DAG. Pipelines in Dragonfly are more nuanced than those in orchestration tools like Apache Airflow, in the sense that they also represent logica groups and stages.
                                             </p>
-                                            <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                                         </div>
                                         <div class="col-lg-5 col-md-12 thumb">
-                                            <img src="assets/img/illustration/7.png" alt="Thumb">
+                                            <img src="assets/img/illustration/concepts-pipeline.png" alt="Thumb">
                                         </div>
                                     </div>
                                 </div>
@@ -391,10 +388,9 @@
                                             <p>
                                                 As tests, they are executable expectations of the data quality. There is a library of checks to choose from. There are some built-in checks based on the component type. And it is possible to write your own.
                                             </p>
-                                            <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                                         </div>
                                         <div class="col-lg-5 col-md-12 thumb">
-                                            <img src="assets/img/illustration/7.png" alt="Thumb">
+                                            <img src="assets/img/illustration/concepts-health-check.png" alt="Thumb">
                                         </div>
                                     </div>
                                 </div>
@@ -405,10 +401,9 @@
                                             <p>
                                                 A quality rating generated by Dragonfly based on the checks applied. It is a comprehensive metrics calculated by weighted resolution of ratings of all dependencies and checks applied.
                                             </p>
-                                            <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Read More</a>
                                         </div>
                                         <div class="col-lg-5 col-md-12 thumb">
-                                            <img src="assets/img/illustration/7.png" alt="Thumb">
+                                            <img src="assets/img/illustration/concepts-health-report.png" alt="Thumb">
                                         </div>
                                     </div>
                                 </div>
