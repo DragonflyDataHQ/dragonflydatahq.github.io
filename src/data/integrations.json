@@ -1,7 +1,22 @@
 {
   "integrations": [
     {
-
+      "name": "PostgreSQL",
+      "categories": "datasource",
+      "icon": "PostgreSQL.svg",
+      "uses": ["Connect and Run data quality checks", "Introspect schema"]
+    },
+    {
+      "name": "PostgreSQL",
+      "categories": "datasource",
+      "icon": "PostgreSQL.svg",
+      "uses": ["Connect and Run data quality checks", "Introspect schema"]
+    },
+    {
+      "name": "PostgreSQL",
+      "categories": "datasource",
+      "icon": "PostgreSQL.svg",
+      "uses": ["Connect and Run data quality checks", "Introspect schema"]
     }
   ]
 }
