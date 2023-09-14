@@ -1,0 +1,118 @@
+{
+  "integrations": [
+    {
+      "name": "PostgreSQL",
+      "categories": "datasource",
+      "icon": "PostgreSQL.svg",
+      "uses": ["Connect and run data quality checks on the structured data"]
+    },
+    {
+      "name": "OpenAI",
+      "categories": "misc",
+      "icon": "openai-logomark.svg",
+      "uses": ["Generating checks based on the data and schema."]
+    },
+    {
+      "name": "MySQL",
+      "categories": "datasource",
+      "icon": "powered-by-mysql.png",
+      "uses": ["Connect and run data quality checks on the structured data"]
+    },
+    {
+      "name": "AWS S3",
+      "categories": "datasource",
+      "icon": "amazon-s3.png",
+      "uses": ["Connect and run data quality checks on the structured data"]
+    },
+    {
+      "name": "AWS Athena",
+      "categories": "datasource",
+      "icon": "aws-athena.svg",
+      "uses": ["Connect and run data quality checks on the structured or unstructured data"]
+    },
+    {
+      "name": "AWS Lambda",
+      "categories": "datasource codeCheck",
+      "icon": "aws-lambda.png",
+      "uses": ["Connect and run data quality checks on the structured data"]
+    },
+    {
+      "name": "AWS Redshift",
+      "categories": "datasource",
+      "icon": "aws-redshift.png",
+      "uses": ["Connect and run data quality checks on the structured data"]
+    },
+    {
+      "name": "AWS SNS",
+      "categories": "alerts",
+      "icon": "aws-sns.svg",
+      "uses": ["Get notified when confidence drops", "Monitor any event"]
+    },
+    {
+      "name": "Apache Airflow",
+      "categories": "orchestrator",
+      "icon": "apache-airflow.png",
+      "uses": ["Automate checks with your data processing pipeline"]
+    },
+    {
+      "name": "e-Mail",
+      "categories": "alerts",
+      "icon": "email.png",
+      "uses": ["Get notified when confidence drops", "Monitor any event"]
+    },
+    {
+      "name": "Google BigQuery",
+      "categories": "datasource",
+      "icon": "google-bigquery.webp",
+      "uses": ["Connect and run data quality checks on the structured data"]
+    },
+    {
+      "name": "New Relic",
+      "categories": "alerts",
+      "icon": "new-relic.svg",
+      "uses": ["Get notified when confidence drops", "Monitor any event"]
+    },
+    {
+      "name": "Pager Duty",
+      "categories": "alerts",
+      "icon": "pager-duty.png",
+      "uses": ["Get notified when confidence drops", "Monitor any event"]
+    },
+    {
+      "name": "Slack",
+      "categories": "alerts",
+      "icon": "slack.svg",
+      "uses": ["Get notified when confidence drops", "Monitor any event"]
+    },
+    {
+      "name": "SMS",
+      "categories": "alerts",
+      "icon": "sms.png",
+      "uses": ["Get notified when confidence drops", "Monitor any event"]
+    },
+    {
+      "name": "Snowflake",
+      "categories": "datasource",
+      "icon": "snowflake.svg",
+      "uses": ["Connect and run data quality checks on the structured or unstructured data"]
+    },
+    {
+      "name": "Splunk On Call",
+      "categories": "alerts",
+      "icon": "splunk-on-call.svg",
+      "uses": ["Get notified when confidence drops", "Monitor any event"]
+    },
+    {
+      "name": "Webhooks",
+      "categories": "alerts",
+      "icon": "webhooks.jpg",
+      "uses": ["Get notified when confidence drops", "Monitor any event"]
+    },
+    {
+      "name": "And Many More...",
+      "categories": "datasource codeCheck alerts orchestrator misc",
+      "icon": "more.png",
+      "uses": ["Many more integrations are in the pipeline. Reach out for priority.apa"]
+    }
+  ]
+}

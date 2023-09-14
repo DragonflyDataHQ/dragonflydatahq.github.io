@@ -1,0 +1,26 @@
+{
+  "name": "dragonfly-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm-watch",
+    "build": "mkdir -p \"doc\" &&\ncp -r ./src/assets doc/assets &&\ncp -r ./src/root-files/* doc/ &&\nnpx hbs -D ./src/data/integrations.json -o ./doc ./src/pages/integrations.hbs &&\ncp ./src/pages/privacy.html ./doc/privacy.html &&\ncp ./src/pages/contact.html ./doc/contact.html &&\ncp ./src/pages/terms.html ./doc/terms.html &&\ncp ./src/pages/features.html ./doc/features.html &&\ncp ./src/pages/support.html ./doc/support.html &&\ncp ./src/pages/contact-thankyou.html ./doc/contact-thankyou.html &&\ncp ./src/pages/index.html ./doc/index.html &&\ncp ./src/pages/404.html ./doc/404.html"
+  },
+  "watch": {
+    "build": {
+      "patterns": ["src/**/"],
+      "extensions": "js,css,json,png,html,hbs,gif,svg"
+    }
+  },
+  "author": "",
+  "license": "All Rights Reserved.",
+  "dependencies": {
+    "hbs-cli": "1.4.1",
+    "npm-watch": "0.11.0"
+  }
+}
