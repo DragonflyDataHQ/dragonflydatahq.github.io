@@ -112,7 +112,7 @@
       "name": "And Many More...",
       "categories": "datasource codeCheck alerts orchestrator misc",
       "icon": "more.png",
-      "uses": ["Many more integrations are in the pipeline. Reach out for priority.apa"]
+      "uses": ["Many more integrations are in the works. Watch this space for more!"]
     }
   ]
 }
