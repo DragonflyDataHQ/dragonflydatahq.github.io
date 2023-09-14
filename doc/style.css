@@ -7091,3 +7091,22 @@ body.dark-layout .works-process-items .item .icon i {
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
 }
+
+
+/**
+My Additions to the theme
+*/
+.projects-area .projects-items .item-effect {
+  background: #fff;
+  padding: 20px;
+  height: 200px;
+}
+
+.projects-area .projects-items .item-effect img {
+  max-height: 150px;
+  max-width: 319px;
+  display: block;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
