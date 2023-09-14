@@ -2,7 +2,7 @@ clean:
 	rm -rf ./doc
 
 build:
-	mkdir -p "doc"
+	mkdir -p docs
 	cp -r ./src/assets doc/assets
 	cp -r ./src/root-files/* doc/
 	npx hbs -D ./src/data/integrations.json -o ./doc ./src/pages/integrations.hbs
