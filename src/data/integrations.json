@@ -73,7 +73,7 @@
       "uses": ["Get notified when confidence drops", "Monitor any event"]
     },
     {
-      "name": "Pager Duty",
+      "name": "PagerDuty",
       "categories": "alerts",
       "icon": "pager-duty.png",
       "uses": ["Get notified when confidence drops", "Monitor any event"]
@@ -97,7 +97,7 @@
       "uses": ["Connect and run data quality checks on the structured or unstructured data"]
     },
     {
-      "name": "Splunk On Call",
+      "name": "Splunk On-Call",
       "categories": "alerts",
       "icon": "splunk-on-call.svg",
       "uses": ["Get notified when confidence drops", "Monitor any event"]
