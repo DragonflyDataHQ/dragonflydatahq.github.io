@@ -1,10 +1,61 @@
 {
   "integrations": [
     {
+      "name": "AWS Redshift",
+      "categories": "datasource",
+      "icon": "aws-redshift.png",
+      "uses": ["Connect and run data quality checks on the structured data"]
+    },
+    {
+      "name": "Google BigQuery",
+      "categories": "datasource",
+      "icon": "google-bigquery.webp",
+      "uses": ["Connect and run data quality checks on the structured data"]
+    },
+    {
+      "name": "Snowflake",
+      "categories": "datasource",
+      "icon": "snowflake.svg",
+      "uses": ["Connect and run data quality checks on the structured or unstructured data"]
+    },
+    {
+      "name": "Apache Hudi",
+      "categories": "datasource",
+      "icon": "apache-hudi.png",
+      "uses": ["Run data quality checks on the direct output of your pipeline processing"]
+    },
+    {
+      "name": "Azure SQL Databases Services",
+      "categories": "datasource",
+      "icon": "azure-sql-db.svg",
+      "uses": ["Verify your Azure SQL family databases and warehouses for data quality"],
+      "style": "height: 135px;"
+    },
+    {
       "name": "PostgreSQL",
       "categories": "datasource",
       "icon": "PostgreSQL.svg",
       "uses": ["Connect and run data quality checks on the structured data"]
+    },
+    {
+      "name": "Apache Kafka",
+      "categories": "datasource",
+      "icon": "apache-kafka.svg",
+      "uses": ["Run data quality checks on your kafka streams, and connected data sets"],
+      "style": "height: 135px;"
+    },
+    {
+      "name": "AWS CloudWatch",
+      "categories": "datasource",
+      "icon": "aws-cloudwatch.png",
+      "uses": ["Monitor process logs in AWS and get early warnings of data quality issues"]
+    },
+    {
+      "name": "Azure Synapse Analytics",
+      "categories": "datasource",
+      "icon": "azure-synapse.svg",
+      "uses": ["Run data quality checks on your Synapse warehouse in Azure"],
+      "style": "height: 135px;"
     },
     {
       "name": "OpenAI",
@@ -19,63 +70,46 @@
       "uses": ["Connect and run data quality checks on the structured data"]
     },
     {
-      "name": "AWS S3",
-      "categories": "datasource",
-      "icon": "amazon-s3.png",
-      "uses": ["Connect and run data quality checks on the structured data"]
-    },
-    {
       "name": "AWS Athena",
       "categories": "datasource",
       "icon": "aws-athena.svg",
       "uses": ["Connect and run data quality checks on the structured or unstructured data"]
     },
     {
+      "name": "AWS S3",
+      "categories": "datasource",
+      "icon": "amazon-s3.png",
+      "uses": ["Connect and run data quality checks on the structured data"]
+    },
+    {
       "name": "AWS Lambda",
       "categories": "datasource codeCheck",
       "icon": "aws-lambda.png",
-      "uses": ["Connect and run data quality checks on the structured data"]
+      "uses": ["Run custom quality checks on any data set using AWS Lambda"]
     },
     {
-      "name": "AWS Redshift",
-      "categories": "datasource",
-      "icon": "aws-redshift.png",
-      "uses": ["Connect and run data quality checks on the structured data"]
-    },
-    {
-      "name": "AWS SNS",
-      "categories": "alerts",
-      "icon": "aws-sns.svg",
-      "uses": ["Get notified when confidence drops", "Monitor any event"]
+      "name": "Google Cloud Functions",
+      "categories": "datasource codeCheck",
+      "icon": "google-cloud-functions.svg",
+      "uses": ["Run custom quality checks on any data set using Google Cloud Functions"],
+      "style": "height: 135px;"
     },
     {
       "name": "Apache Airflow",
       "categories": "orchestrator",
       "icon": "apache-airflow.png",
-      "uses": ["Automate checks with your data processing pipeline"]
+      "uses": ["With our Airflow Plugin, automate checks in-line with your data processing"]
+    },
+    {
+      "name": "Cron",
+      "categories": "orchestrator",
+      "icon": "scheduling.png",
+      "uses": ["Automate quality checks with the reliable cron schedules"]
     },
     {
       "name": "e-Mail",
       "categories": "alerts",
       "icon": "email.png",
-      "uses": ["Get notified when confidence drops", "Monitor any event"]
-    },
-    {
-      "name": "Google BigQuery",
-      "categories": "datasource",
-      "icon": "google-bigquery.webp",
-      "uses": ["Connect and run data quality checks on the structured data"]
-    },
-    {
-      "name": "New Relic",
-      "categories": "alerts",
-      "icon": "new-relic.svg",
-      "uses": ["Get notified when confidence drops", "Monitor any event"]
-    },
-    {
-      "name": "PagerDuty",
-      "categories": "alerts",
-      "icon": "pager-duty.png",
       "uses": ["Get notified when confidence drops", "Monitor any event"]
     },
     {
@@ -91,15 +125,27 @@
       "uses": ["Get notified when confidence drops", "Monitor any event"]
     },
     {
-      "name": "Snowflake",
-      "categories": "datasource",
-      "icon": "snowflake.svg",
-      "uses": ["Connect and run data quality checks on the structured or unstructured data"]
+      "name": "New Relic",
+      "categories": "alerts",
+      "icon": "new-relic.svg",
+      "uses": ["Get notified when confidence drops", "Monitor any event"]
+    },
+    {
+      "name": "PagerDuty",
+      "categories": "alerts",
+      "icon": "pager-duty.png",
+      "uses": ["Get notified when confidence drops", "Monitor any event"]
     },
     {
       "name": "Splunk On-Call",
       "categories": "alerts",
       "icon": "splunk-on-call.svg",
+      "uses": ["Get notified when confidence drops", "Monitor any event"]
+    },
+    {
+      "name": "AWS SNS",
+      "categories": "alerts",
+      "icon": "aws-sns.svg",
       "uses": ["Get notified when confidence drops", "Monitor any event"]
     },
     {
