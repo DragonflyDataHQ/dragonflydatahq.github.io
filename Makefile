@@ -14,6 +14,7 @@ build:
 	cp ./src/pages/contact-thankyou.html ./docs/contact-thankyou.html
 	cp ./src/pages/index.html ./docs/index.html
 	cp ./src/pages/404.html ./docs/404.html
+	cp CNAME ./docs/CNAME
 
 
 dev:
