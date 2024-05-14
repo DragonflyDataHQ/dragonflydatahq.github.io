@@ -446,21 +446,23 @@
                         .after('<img src="assets/img/ajax-loader.gif" class="loader" />')
                         .attr('disabled', 'disabled');
 
-                    $.post(action, {
-                            name: $('#name').val(),
-                            email: $('#email').val(),
-                            phone: $('#phone').val(),
-                            comments: $('#comments').val()
-                        },
+                    $.post(action, formInstance.serialize(),
                         function(data) {
-                            document.getElementById('message').innerHTML = data;
+                            document.getElementById('message').innerHTML = JSON.parse(data);
                             $('#message').slideDown('slow');
                             $('.contact-form img.loader').fadeOut('slow', function() {
                                 $(this).remove()
                             });
                             $('#submit').removeAttr('disabled');
                         }
-                    );
+                    ).fail(function (err, m, data) {
+                        document.getElementById('message').innerHTML = "Feel free to drop a direct mail using the address shared. " + data;
+                        $('#message').slideDown('slow');
+                        $('.contact-form img.loader').fadeOut('slow', function() {
+                            $(this).remove()
+                        });
+                        $('#submit').removeAttr('disabled');
+                    });
                 });
                 return false;
             });
