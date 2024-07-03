@@ -3,7 +3,7 @@ clean:
 
 build:
 	mkdir -p docs
-	cp -r ./src/assets docs/assets
+	cp -r ./src/assets docs/
 	cp -r ./src/root-files/* docs/
 	npx hbs -D ./src/data/integrations.json -o ./docs ./src/pages/integrations.hbs
 	cp ./src/pages/privacy.html ./docs/privacy.html
