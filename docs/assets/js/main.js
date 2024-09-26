@@ -469,7 +469,7 @@
         });
 
         /*
-         *  Youtube overlay player
+         *  YouTube overlay player
          */
         $("#video-demo-button").click((event) => {
             event.preventDefault();
