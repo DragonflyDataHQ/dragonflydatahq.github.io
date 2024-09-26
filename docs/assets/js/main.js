@@ -468,5 +468,20 @@
             });
         });
 
+        /*
+         *  Youtube overlay player
+         */
+        $("#video-demo-button").click((event) => {
+            event.preventDefault();
+            console.log("testing")
+            $(".youtube-player-overlay").addClass("active");
+        })
+
+        $(".youtube-player-overlay").click(function () {
+            $("#video-demo-embedded").attr("src", $("#video-demo-embedded").attr("src"));
+            $(this).removeClass("active");
+        })
+
+
     }); // end document ready function
 })(jQuery); // End jQuery
