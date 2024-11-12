@@ -2,6 +2,7 @@ clean:
 	rm -rf ./docs
 
 build:
+	node -v
 	mkdir -p docs
 	cp -r ./src/assets docs/
 	cp -r ./src/root-files/* docs/
