@@ -446,23 +446,33 @@
                         .after('<img src="assets/img/ajax-loader.gif" class="loader" />')
                         .attr('disabled', 'disabled');
 
-                    $.post(action, formInstance.serialize(),
-                        function(data) {
-                            document.getElementById('message').innerHTML = JSON.parse(data);
+                    $.ajax({
+                        method: "POST",
+                        url: action,
+                        dataType: 'json',
+                        accepts: 'application/json',
+                        data: {
+                            name: $('#name').val(),
+                            email: $('#email').val(),
+                            phone: $('#phone').val(),
+                            message: $('#comments').val(),
+                            _captcha: false
+                        },
+                        success: function(result,status,xhr) {
+                            console.log("success:" + result);
+                        },
+                        error: function (xhr,status,error) {
+                            console.log("error:" + error)
+                        },
+                        complete: function(xhr,status) {
+                            document.getElementById('message').innerHTML = "Feel free to block a time for demo, if you do not hear back from us in time."
                             $('#message').slideDown('slow');
                             $('.contact-form img.loader').fadeOut('slow', function() {
                                 $(this).remove()
                             });
                             $('#submit').removeAttr('disabled');
                         }
-                    ).fail(function (err, m, data) {
-                        document.getElementById('message').innerHTML = "Feel free to drop a direct mail using the address shared. " + data;
-                        $('#message').slideDown('slow');
-                        $('.contact-form img.loader').fadeOut('slow', function() {
-                            $(this).remove()
-                        });
-                        $('#submit').removeAttr('disabled');
-                    });
+                    })
                 });
                 return false;
             });
