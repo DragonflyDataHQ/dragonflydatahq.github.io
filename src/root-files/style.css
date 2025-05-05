@@ -3511,7 +3511,7 @@ body,
 }
 
 .services-area .services-items .item > img {
-  width: 100px;
+  /*width: 100px;*/
   height: auto;
   margin-bottom: 30px;
   min-height: 100px;
