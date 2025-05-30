@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dragonfly monitors datasets as they&#039;re updated, evaluating quality with a confidence rating and alerting users (or halting pipelines) if it falls below threshold." />
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Data QA Maturity Tool | Dragonfly: Data Observability &amp; Quality Monitoring" />
+    <meta itemprop="description" content="Dragonfly monitors datasets as they&#039;re updated, evaluating quality with a confidence rating and alerting users (or halting pipelines) if it falls below threshold." />
+    <meta itemprop="image" content="https://dragonflydatahq.com/assets/img/logo-full.png" />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://dragonflydatahq.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Data QA Maturity Tool | Dragonfly: Data Observability &amp; Quality Monitoring" />
+    <meta property="og:description" content="Dragonfly monitors datasets as they&#039;re updated, evaluating quality with a confidence rating and alerting users (or halting pipelines) if it falls below threshold." />
+    <meta property="og:image" content="https://dragonflydatahq.com/assets/img/logo-full.png" />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Data QA Maturity Tool | Dragonfly: Data Observability &amp; Quality Monitoring" />
+    <meta name="twitter:description" content="Dragonfly monitors datasets as they&#039;re updated, evaluating quality with a confidence rating and alerting users (or halting pipelines) if it falls below threshold." />
+    <meta name="twitter:image" content="https://dragonflydatahq.com/assets/img/logo-full.png" />
+
+    <!-- ========== Page Title ========== -->
+    <title>Data QA Maturity Tool | Dragonfly: Data Observability &amp; Quality Monitoring</title>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5/html5shiv.min.js"></script>
+    <script src="assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5LG8T78W');</script>
+    <!-- End Google Tag Manager -->
+
+    <style>
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+        .question-card {
+            transition: all 0.3s ease;
+        }
+        .question-card:hover {
+            box-shadow: 0 0 0 2px #3b82f6;
+        }
+        .w-100 {
+            width: 100%;
+        }
+        .p-6 {
+            padding: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body class="dark-layout">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LG8T78W"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Preloader Start -->
+<div class="se-pre-con"></div>
+<!-- Preloader Ends -->
+
+<!-- Header
+============================================= -->
+<header id="home">
+
+    <!-- Start Navigation -->
+    <nav class="navbar bg-gray navbar-default navbar-fixed-light attr-border navbar-fixed dark no-background bootsnav">
+
+        <div class="container">
+
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo-light.png" class="logo" alt="Logo">
+                </a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="features.html">Features</a>
+                    </li>
+                    <li>
+                        <a href="integrations.html">Integrations</a>
+                    </li>
+                    <li>
+                        <a href="index.html#concepts">Key Concepts</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+
+    </nav>
+    <!-- End Navigation -->
+
+</header>
+<!-- End Header -->
+
+<!-- Start Start With Us Area
+============================================= -->
+<div class="start-us-area overflow-hidden bg-gradient text-light default-padding" id="feature-data-quality-assurance">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 page-title-area">
+                <div class="site-heading text-center">
+                    <h2>How Mature Is Your Data Quality Practice?</h2>
+                    <h5>Slide through the questions to rate your readiness. Get an instant score and tailored guidance.</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row align-center">
+            <div class="col-lg-12">
+                <form id="assessmentForm" class="space-y-8"></form>
+                <div class="text-center mt-12">
+                    <button type="button" onclick="calculateScore()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg text-lg shadow-md">
+                        Calculate My Score
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row align-center">
+            <div class="col-lg-12">
+                <div class="info wow fadeInLeft">
+                    <div id="resultSection" class="mt-14 hidden text-center">
+                        <h2 class="text-3xl font-bold mb-4">Your Score: <span id="scoreValue" class="text-blue-600"></span>/10</h2>
+                        <p id="recommendation" class="text-xl font-medium mb-6"></p>
+
+                        <div id="contactDetails" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 hidden max-w-md mx-auto rounded-lg shadow">
+                            <p class="mb-2 font-semibold">🚨 Urgent Action Required!</p>
+                            <p class="mb-1">Please contact our data quality specialists immediately:</p>
+                            <p>Email: <a href="mailto:info@upshotideas.com" class="underline">info@upshotideas.com</a></p>
+                            <p>Phone: <a href="tel:+919960790196" class="underline">+91-996-079-0196</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Start With Us Area -->
+<script>
+    const questions = [
+        "How confident are you that your organization consistently detects data quality issues before they impact critical business decisions?",
+        "How well do you understand the current state of data quality in your mission-critical data sources — without extra analysis?",
+        "How quickly can your team identify and respond to data incidents (e.g., anomalies, missing data, schema changes)?",
+        "How standardized are your data quality rules and monitoring across all your business units and regions?",
+        "How much manual effort does your team put into monitoring or remediating data quality issues?",
+        "How confident are you that compliance and regulatory risks caused by poor data quality are proactively detected?",
+        "How seamless is collaboration between IT/data teams and business stakeholders when addressing data quality issues?",
+        "How often are your metrics, dashboards, or reports delayed or disrupted due to data quality problems?",
+        "How easy is it for you to get a unified view of data quality metrics across all data platforms?",
+        "How confident are you that your data quality posture supports your current and future data-driven initiatives?"
+    ];
+
+    const labels = [
+        "1 - Poor", "2 - Weak", "3 - Average", "4 - Good", "5 - Excellent"
+    ];
+
+    const form = document.getElementById("assessmentForm");
+
+    questions.forEach((q, index) => {
+        form.innerHTML += `
+        <div class="p-6 bg-gray-50 rounded-lg border border-gray-200 question-card">
+          <label class="block font-semibold text-lg mb-2">${index + 1}. ${q}</label>
+          <input type="range" min="1" max="5" value="1" step="1" class="w-100 slider" name="q${index + 1}" />
+          <div class="slider-labels mt-2">
+            ${labels.map(label => `<span>${label}</span>`).join('')}
+          </div>
+        </div>
+      `;
+    });
+
+    function calculateScore() {
+        const sliders = document.querySelectorAll('input[type="range"]');
+        let total = 0;
+        sliders.forEach(s => total += parseInt(s.value));
+        const score = (total / (sliders.length * 5) * 10).toFixed(2);
+
+        document.getElementById("scoreValue").textContent = score;
+        document.getElementById("resultSection").classList.remove("hidden");
+
+        const rec = document.getElementById("recommendation");
+        const contact = document.getElementById("contactDetails");
+
+        if (score < 7) {
+            rec.textContent = "⚠️ Your data quality maturity is critically low. Seek professional support immediately.";
+            contact.classList.remove("hidden");
+        } else if (score < 8) {
+            rec.textContent = "⚠️ Your data quality strategy is vulnerable. A specialist should assist you.";
+            contact.classList.remove("hidden");
+        } else if (score < 9.5) {
+            rec.textContent = "✅ You're in a strong position. You can likely apply fixes internally.";
+            contact.classList.add("hidden");
+        } else {
+            rec.textContent = "🎉 Amazing! Your data quality monitoring is excellent!";
+            contact.classList.add("hidden");
+        }
+
+        // 👇 Smooth scroll to result
+        document.getElementById("resultSection").scrollIntoView({ behavior: "smooth" });
+    }
+</script>
+
+<!-- Star Footer
+============================================= -->
+<footer>
+    <div class="container">
+        <div class="f-items default-padding">
+            <div class="row">
+                <div class="equal-height col-lg-4 col-md-4 item">
+                    <div class="f-item about">
+                        <img src="assets/img/logo-light.png" alt="Logo">
+                        <p>
+                            A Data Quality Monitoring platform, built by Upshot Ideas Technology Lab LLP.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="equal-height col-lg-4 col-md-4 item">
+                    <div class="f-item link">
+                        <h4 class="widget-title">Useful Links</h4>
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="features.html">Features</a>
+                            </li>
+                            <li>
+                                <a href="index.html#concepts">Key Concepts</a>
+                            </li>
+                            <li>
+                                <a href="https://nikhilwanpal.in/category/dragonfly/">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="equal-height col-lg-4 col-md-4 item">
+                    <div class="f-item contact">
+                        <h4 class="widget-title">Contact Info</h4>
+                        <p>
+                            If you wish to experience the heightened confidence in your data reports, reach out to us.
+                        </p>
+                        <div class="address">
+                            <ul>
+                                <li>
+                                    <strong>Email: </strong><a href="mailto:info@upshotideas.com">info@upshotideas.com</a>
+                                </li>
+                                <li>
+                                    <strong>Contact: </strong><a href="tel:+919960790196">+91-996-079-0196</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="social">
+                            <li class="linkedin">
+                                <a href="https://www.linkedin.com/company/99978574"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li class="twitter">
+                                <a href="https://twitter.com/nikhilwanpal"><i class="fab fa-twitter"></i></a>
+                            </li>
+<!--                                <li class="instagram">-->
+<!--                                    <a href="#"><i class="fab fa-instagram"></i></a>-->
+<!--                                </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>&copy; Copyright 2024. All Rights Reserved by <a href="http://upshotideas.com">Upshot Ideas Technology Lab LLP</a></p>
+                </div>
+                <div class="col-lg-6 text-right link">
+                    <ul>
+                        <li>
+                            <a href="terms.html">Terms</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="support.html">Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Shape -->
+    <div class="footer-shape" style="background-image: url(assets/img/shape/1.svg);"></div>
+    <!-- End Shape -->
+</footer>
+<!-- End Footer-->
+
+<!-- jQuery Frameworks
+============================================= -->
+<script src="assets/js/jquery-1.12.4.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/equal-height.min.js"></script>
+<script src="assets/js/jquery.appear.js"></script>
+<script src="assets/js/jquery.easing.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/modernizr.custom.13711.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/progress-bar.min.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/count-to.js"></script>
+<script src="assets/js/YTPlayer.min.js"></script>
+<script src="assets/js/circle-progress.js"></script>
+<script src="assets/js/bootsnav.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npm-watch",
-    "build": "mkdir -p docs\n\tcp -r ./src/assets docs/\n\tcp -r ./src/root-files/* docs/\n\tnpx hbs -D ./src/data/integrations.json -o ./docs ./src/pages/integrations.hbs\n\tcp ./src/pages/privacy.html ./docs/privacy.html\n\tcp ./src/pages/contact.html ./docs/contact.html\n\tcp ./src/pages/terms.html ./docs/terms.html\n\tcp ./src/pages/features.html ./docs/features.html\n\tcp ./src/pages/support.html ./docs/support.html\n\tcp ./src/pages/contact-thankyou.html ./docs/contact-thankyou.html\n\tcp ./src/pages/index.html ./docs/index.html\n\tcp ./src/pages/404.html ./docs/404.html"
+    "build": "mkdir -p docs\n\tcp -r ./src/assets docs/\n\tcp -r ./src/root-files/* docs/\n\tnpx hbs -D ./src/data/integrations.json -o ./docs ./src/pages/integrations.hbs\n\tcp ./src/pages/privacy.html ./docs/privacy.html\n\tcp ./src/pages/contact.html ./docs/contact.html\n\tcp ./src/pages/terms.html ./docs/terms.html\n\tcp ./src/pages/features.html ./docs/features.html\n\tcp ./src/pages/support.html ./docs/support.html\n\tcp ./src/pages/contact-thankyou.html ./docs/contact-thankyou.html\n\tcp ./src/pages/index.html ./docs/index.html\n\tcp ./src/pages/404.html ./docs/404.html\n\tcp ./src/pages/tool-dq-maturity.html ./docs/tool-dq-maturity.html"
   },
   "watch": {
     "build": {
