@@ -82,6 +82,28 @@
             margin-top: 2rem;
             margin-bottom: 0;
         }
+        /* Ensure alert-danger text is visible in dark mode */
+        body.dark-layout .alert-danger, body.dark-layout .alert-danger * {
+            color: #721c24 !important;
+        }
+        /* Ensure alert-success text is dark and readable */
+        .alert-success, .alert-success * {
+            color: #155724 !important;
+        }
+
+        .alert-warning, .alert-warning * {
+            color: #856404 !important;
+        }
+
+        /* Pulse animation for urgent alert */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(220,53,69,0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(220,53,69,0); }
+            100% { box-shadow: 0 0 0 0 rgba(220,53,69,0); }
+        }
+        .alert-urgent {
+            animation: pulse 1.5s infinite;
+        }
     </style>
 </head>
 
@@ -157,9 +179,9 @@
         </div>
         <div class="row align-center">
             <div class="col-lg-12">
-                <form id="assessmentForm" class="space-y-8"></form>
-                <div class="text-center mt-12">
-                    <button type="button" onclick="calculateScore()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg text-lg shadow-md">
+                <form id="assessmentForm" class="d-flex flex-column gap-4"></form>
+                <div class="text-center mt-4">
+                    <button type="button" onclick="calculateScore()" class="btn btn-primary btn-lg shadow">
                         Calculate My Score
                     </button>
                 </div>
@@ -168,15 +190,15 @@
         <div class="row align-center">
             <div class="col-lg-12">
                 <div class="info wow fadeInLeft">
-                    <div id="resultSection" class="mt-14 hidden text-center">
-                        <h2 class="text-3xl font-bold mb-4">Your Score: <span id="scoreValue" class="text-blue-600"></span>/10</h2>
-                        <p id="recommendation" class="text-xl font-medium mb-6"></p>
+                    <div id="resultSection" class="mt-5 d-none text-center">
+                        <h2 class="fs-1 fw-bold mb-4">Your Score: <span id="scoreValue" class="text-primary"></span>/10</h2>
+                        <p id="recommendation" class="fs-4 fw-medium mb-4"></p>
 
-                        <div id="contactDetails" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 hidden max-w-md mx-auto rounded-lg shadow">
-                            <p class="mb-2 font-semibold">🚨 Urgent Action Required!</p>
-                            <p class="mb-1">Please contact our data quality specialists immediately:</p>
-                            <p>Email: <a href="mailto:info@upshotideas.com" class="underline">info@upshotideas.com</a></p>
-                            <p>Phone: <a href="tel:+919960790196" class="underline">+91-996-079-0196</a></p>
+                        <div id="contactDetails" class="alert alert-danger d-flex flex-column align-items-center gap-2 p-4 d-none mx-auto rounded shadow border-4 border-danger">
+                            <p id="contactHeading" class="mb-2 fw-bold text-danger-emphasis fs-4"><i class="fa fa-exclamation-triangle me-2"></i>Urgent Action Required!</p>
+                            <p id="contactMessage" class="mb-1 text-danger-emphasis">Contact our data quality specialists immediately:</p>
+                            <p class="mb-0"><span class="fw-semibold">Email:</span> <a href="mailto:info@upshotideas.com?subject=Need%20Help%20With%20Data%20Quality" class="text-danger text-decoration-underline">info@upshotideas.com</a></p>
+                            <p class="mb-0"><span class="fw-semibold">Phone:</span> <a href="tel:+919960790196" class="text-danger text-decoration-underline">+91-996-079-0196</a></p>
                         </div>
                     </div>
                 </div>
@@ -207,8 +229,8 @@
 
     questions.forEach((q, index) => {
         form.innerHTML += `
-        <div class="p-6 bg-gray-50 rounded-lg border border-gray-200 question-card">
-          <label class="block font-semibold text-lg mb-2">${index + 1}. ${q}</label>
+        <div class="p-4 mt-md-4 rounded border question-card">
+          <label class="d-block fw-semibold fs-4 mb-2">${index + 1}. ${q}</label>
           <input type="range" min="1" max="5" value="1" step="1" class="w-100 slider" name="q${index + 1}" />
           <div class="slider-labels mt-2">
             ${labels.map(label => `<span>${label}</span>`).join('')}
@@ -224,23 +246,40 @@
         const score = (total / (sliders.length * 5) * 10).toFixed(2);
 
         document.getElementById("scoreValue").textContent = score;
-        document.getElementById("resultSection").classList.remove("hidden");
+        document.getElementById("resultSection").classList.remove("d-none");
 
         const rec = document.getElementById("recommendation");
         const contact = document.getElementById("contactDetails");
+        const contactHeading = document.getElementById("contactHeading");
+        const contactMessage = document.getElementById("contactMessage");
+
+        // Remove all alert color classes and urgent animation
+        contact.classList.remove('alert-danger', 'alert-warning', 'alert-success', 'alert-urgent', 'border-danger', 'border-warning', 'border-success');
 
         if (score < 7) {
-            rec.textContent = "⚠️ Your data quality maturity is critically low. Seek professional support immediately.";
-            contact.classList.remove("hidden");
+            rec.textContent = "⚠️ Your data quality maturity is critically low, but fret not! You have taken the first step towards improving it!";
+            contact.classList.remove("d-none");
+            contact.classList.add('alert-danger', 'border-danger', 'alert-urgent');
+            contactHeading.innerHTML = '<i class="fa fa-exclamation-triangle me-2"></i>Urgent Action Required!';
+            contactMessage.textContent = 'Contact our data quality specialists immediately:';
         } else if (score < 8) {
-            rec.textContent = "⚠️ Your data quality strategy is vulnerable. A specialist should assist you.";
-            contact.classList.remove("hidden");
+            rec.textContent = "⚠️ Your data quality strategy needs improvement. A specialist should assist you.";
+            contact.classList.remove("d-none");
+            contact.classList.add('alert-danger', 'border-danger', 'alert-urgent');
+            contactHeading.innerHTML = '<i class="fa fa-lightbulb-o me-2"></i>For further improvement, reach out to us!';
+            contactMessage.textContent = 'Our specialists can help you get to the next level:';
         } else if (score < 9.5) {
-            rec.textContent = "✅ You're in a strong position. You can likely apply fixes internally.";
-            contact.classList.add("hidden");
+            rec.textContent = "✅ You're in a strong position. You can probably make the improvements on your own.";
+            contact.classList.remove("d-none");
+            contact.classList.add('alert-warning', 'border-warning');
+            contactHeading.innerHTML = '<i class="fa fa-comments me-2"></i>Let\'s Chat!';
+            contactMessage.textContent = 'But we can take you to the next level, faster; And would be happy to discuss, please reach out here:';
         } else {
             rec.textContent = "🎉 Amazing! Your data quality monitoring is excellent!";
-            contact.classList.add("hidden");
+            contact.classList.remove("d-none");
+            contact.classList.add('alert-success', 'border-success');
+            contactHeading.innerHTML = '<i class="fa fa-graduation-cap me-2"></i>Teach Us Your Ways!';
+            contactMessage.textContent = 'Hm, we would love to learn from you, would you teach us?';
         }
 
         // 👇 Smooth scroll to result
