@@ -243,7 +243,8 @@
         const sliders = document.querySelectorAll('input[type="range"]');
         let total = 0;
         sliders.forEach(s => total += parseInt(s.value));
-        const score = (total / (sliders.length * 5) * 10).toFixed(2);
+        // Formula is Final Score = ((Raw Score - RawMin) / (RawMax - RawMin)) * (FinalMax - FinalMin) + FinalMin
+        const score = (1 + 9 * ((total - sliders.length) / (4 * sliders.length))).toFixed(2);
 
         document.getElementById("scoreValue").textContent = score;
         document.getElementById("resultSection").classList.remove("d-none");
