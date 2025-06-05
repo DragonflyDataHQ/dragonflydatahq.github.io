@@ -357,7 +357,7 @@
         }
 
         // 👇 Smooth scroll to result
-        document.getElementById("resultSection").scrollIntoView({ behavior: "smooth" });
+        document.getElementById("resultSection").scrollIntoView({ behavior: "smooth", block: "center" });
 
         // Prepare data for ajax call
         const formData = {
@@ -379,7 +379,7 @@
 
         //this is the ajax call:
         $.ajax({
-            url: "https://formsubmit.co/ajax/salestools@dragonflydatahq.com",
+            url: "https://formsubmit.co/ajax/351ae045bce7d712efe80fe137df66f1",
             method: "POST",
             data: formData,
             dataType: "json",
