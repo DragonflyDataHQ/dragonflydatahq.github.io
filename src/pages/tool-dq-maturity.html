@@ -179,7 +179,34 @@
         </div>
         <div class="row align-center">
             <div class="col-lg-12">
-                <form id="assessmentForm" class="d-flex flex-column gap-4"></form>
+                <form id="assessmentForm" class="d-flex flex-column gap-4">
+                    <div id="questionsContainer" class="d-flex flex-column gap-4"></div>
+                    <div class="p-4 mt-md-4 rounded border question-card">
+                        <h4 class="mb-3">Please tell a bit about yourself</h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="userName" class="form-label fw-semibold">Full Name *</label>
+                                <input type="text" class="form-control" id="userName" name="userName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="userEmail" class="form-label fw-semibold">Email Address *</label>
+                                <input type="email" class="form-control" id="userEmail" name="userEmail" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="userCompany" class="form-label fw-semibold">Company *</label>
+                                <input type="text" class="form-control" id="userCompany" name="userCompany" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="userDesignation" class="form-label fw-semibold">Designation *</label>
+                                <input type="text" class="form-control" id="userDesignation" name="userDesignation" required>
+                            </div>
+                        </div>
+                        <div id="userDetailsError" class="alert alert-danger mt-3 d-none">
+                            Please fill in all required fields before calculating your score.
+                        </div>
+                    </div>
+                </form>
+
                 <div class="text-center mt-4">
                     <button type="button" onclick="calculateScore()" class="btn btn-primary btn-lg shadow">
                         Calculate My Score
@@ -225,10 +252,15 @@
         "1 - Poor", "2 - Weak", "3 - Average", "4 - Good", "5 - Excellent"
     ];
 
-    const form = document.getElementById("assessmentForm");
+    const questionsContainer = document.getElementById("questionsContainer");
+
+    // // Create a container for questions
+    // const questionsContainer = document.createElement('div');
+    // questionsContainer.id = 'questionsContainer';
+    // questionsContainer.className = 'd-flex flex-column gap-4';
 
     questions.forEach((q, index) => {
-        form.innerHTML += `
+        questionsContainer.innerHTML += `
         <div class="p-4 mt-md-4 rounded border question-card">
           <label class="d-block fw-semibold fs-4 mb-2">${index + 1}. ${q}</label>
           <input type="range" min="1" max="5" value="1" step="1" class="w-100 slider" name="q${index + 1}" />
@@ -239,7 +271,28 @@
       `;
     });
 
+    // Append questions container after the user details section
+    // questionsContainer.appendChild(questionsContainer);
+
     function calculateScore() {
+        // Validate user details first
+        const userName = document.getElementById('userName').value.trim();
+        const userEmail = document.getElementById('userEmail').value.trim();
+        const userCompany = document.getElementById('userCompany').value.trim();
+        const userDesignation = document.getElementById('userDesignation').value.trim();
+        const userDetailsError = document.getElementById('userDetailsError');
+
+        // Check if all required fields are filled
+        if (!userName || !userEmail || !userCompany || !userDesignation) {
+            userDetailsError.classList.remove('d-none');
+            // Scroll to the error message
+            // userDetailsError.scrollIntoView({ behavior: "smooth" });
+            return; // Stop execution if validation fails
+        }
+
+        // Hide error message if all fields are filled
+        userDetailsError.classList.add('d-none');
+
         const sliders = document.querySelectorAll('input[type="range"]');
         let total = 0;
         sliders.forEach(s => total += parseInt(s.value));
