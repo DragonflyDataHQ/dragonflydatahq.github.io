@@ -208,9 +208,15 @@
                 </form>
 
                 <div class="text-center mt-4">
-                    <button type="button" onclick="calculateScore()" class="btn btn-primary btn-lg shadow">
+                    <button type="button" id="calculateBtn" onclick="calculateScore()" class="btn btn-primary btn-lg shadow">
                         Calculate My Score
                     </button>
+                    <div id="loadingSpinner" class="d-none mt-3">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2">Processing your assessment...</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -293,12 +299,26 @@
         // Hide error message if all fields are filled
         userDetailsError.classList.add('d-none');
 
+        // Collect all question answers
         const sliders = document.querySelectorAll('input[type="range"]');
         let total = 0;
-        sliders.forEach(s => total += parseInt(s.value));
+        const questionAnswers = {};
+
+        sliders.forEach((slider, index) => {
+            const value = parseInt(slider.value);
+            total += value;
+            questionAnswers[`question${index + 1}`] = {
+                question: questions[index],
+                answer: value,
+                answerText: labels[value - 1]
+            };
+        });
+
+        // Calculate score
         // Formula is Final Score = ((Raw Score - RawMin) / (RawMax - RawMin)) * (FinalMax - FinalMin) + FinalMin
         const score = (1 + 9 * ((total - sliders.length) / (4 * sliders.length))).toFixed(2);
 
+        // Display the score and recommendations immediately
         document.getElementById("scoreValue").textContent = score;
         document.getElementById("resultSection").classList.remove("d-none");
 
@@ -338,6 +358,42 @@
 
         // 👇 Smooth scroll to result
         document.getElementById("resultSection").scrollIntoView({ behavior: "smooth" });
+
+        // Prepare data for ajax call
+        const formData = {
+            userName: userName,
+            userEmail: userEmail,
+            userCompany: userCompany,
+            userDesignation: userDesignation,
+            score: score,
+            questionAnswers: JSON.stringify(questionAnswers),
+            _subject: `Data Quality Maturity Assessment - Score: ${score}/10`
+        };
+
+        // Show loading indicator and disable button
+        const calculateBtn = document.getElementById('calculateBtn');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+
+        calculateBtn.disabled = true;
+        loadingSpinner.classList.remove('d-none');
+
+        //this is the ajax call:
+        $.ajax({
+            url: "https://formsubmit.co/ajax/salestools@dragonflydatahq.com",
+            method: "POST",
+            data: formData,
+            dataType: "json",
+            success: function(response) {
+                // Hide loading spinner and re-enable button
+                loadingSpinner.classList.add('d-none');
+                calculateBtn.disabled = false;
+            },
+            error: function(error) {
+                // Hide loading spinner and re-enable button
+                loadingSpinner.classList.add('d-none');
+                calculateBtn.disabled = false;
+            }
+        });
     }
 </script>
 
