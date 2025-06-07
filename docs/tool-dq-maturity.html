@@ -241,22 +241,56 @@
 </div>
 <!-- End Start With Us Area -->
 <script>
+    const scales = {
+        frequency: ["1 - Never", "2 - Rarely", "3 - Sometimes", "4 - Often", "5 - Always"],
+        value: ["1 - Very Low", "2 - Low", "3 - Medium", "4 - High", "5 - Very High"],
+        quality: ["1 - Poor", "2 - Weak", "3 - Average", "4 - Good", "5 - Excellent"]
+    };
+
     const questions = [
-        "How confident are you that your organization consistently detects data quality issues before they impact critical business decisions?",
-        "How well do you understand the current state of data quality in your mission-critical data sources — without extra analysis?",
-        "How quickly can your team identify and respond to data incidents (e.g., anomalies, missing data, schema changes)?",
-        "How standardized are your data quality rules and monitoring across all your business units and regions?",
-        "How much manual effort does your team put into monitoring or remediating data quality issues?",
-        "How confident are you that compliance and regulatory risks caused by poor data quality are proactively detected?",
-        "How seamless is collaboration between IT/data teams and business stakeholders when addressing data quality issues?",
-        "How often are your metrics, dashboards, or reports delayed or disrupted due to data quality problems?",
-        "How easy is it for you to get a unified view of data quality metrics across all data platforms?",
-        "How confident are you that your data quality posture supports your current and future data-driven initiatives?"
+        {
+            q: "How confident are you that your organization consistently detects data quality issues before they impact critical business decisions?",
+            scale: scales.quality
+        },
+        {
+            q: "How well do you understand the current state of data quality in your mission-critical data sources?",
+            scale: scales.value
+        },
+        {
+            q: "How quickly can your team identify and respond to data incidents within your SLA? (e.g., anomalies, missing data, schema changes)?",
+            scale: scales.frequency
+        },
+        {
+            q: "How standardized are your data quality rules and monitoring across all your business units and regions?",
+            scale: scales.value
+        },
+        {
+            q: "How automated is your team's monitoring and remediation of data quality issues?",
+            scale: scales.value
+        },
+        {
+            q: "How confident are you that compliance and regulatory risks caused by poor data quality are proactively detected?",
+            scale: scales.quality
+        },
+        {
+            q: "How seamless is collaboration between IT/data teams and business stakeholders when addressing data quality issues?",
+            scale: scales.quality
+        },
+        {
+            q: "How consistently do your metrics, dashboards, and reports deliver on time without data quality disruptions?",
+            scale: scales.frequency
+        },
+        {
+            q: "How easy is it for you to get a unified view of data quality metrics across all data platforms?",
+            scale: scales.value
+        },
+        {
+            q: "How confident are you that your data quality posture supports your current and future data-driven initiatives?",
+            scale: scales.quality
+        }
     ];
 
-    const labels = [
-        "1 - Poor", "2 - Weak", "3 - Average", "4 - Good", "5 - Excellent"
-    ];
+
 
     const questionsContainer = document.getElementById("questionsContainer");
 
@@ -265,13 +299,13 @@
     // questionsContainer.id = 'questionsContainer';
     // questionsContainer.className = 'd-flex flex-column gap-4';
 
-    questions.forEach((q, index) => {
+    questions.forEach((qConfig, index) => {
         questionsContainer.innerHTML += `
         <div class="p-4 mt-md-4 rounded border question-card">
-          <label class="d-block fw-semibold fs-4 mb-2">${index + 1}. ${q}</label>
+          <label class="d-block fw-semibold fs-4 mb-2">${index + 1}. ${qConfig.q}</label>
           <input type="range" min="1" max="5" value="1" step="1" class="w-100 slider" name="q${index + 1}" />
           <div class="slider-labels mt-2">
-            ${labels.map(label => `<span>${label}</span>`).join('')}
+            ${qConfig.scale.map(label => `<span>${label}</span>`).join('')}
           </div>
         </div>
       `;
