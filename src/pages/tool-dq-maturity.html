@@ -344,7 +344,7 @@
             questionAnswers[`question${index + 1}`] = {
                 question: questions[index].q,
                 answer: value,
-                answerText: questions[index].scale
+                answerText: questions[index].scale[value - 1]
             };
         });
 
