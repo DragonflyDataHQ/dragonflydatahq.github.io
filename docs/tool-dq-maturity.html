@@ -342,9 +342,9 @@
             const value = parseInt(slider.value);
             total += value;
             questionAnswers[`question${index + 1}`] = {
-                question: questions[index],
+                question: questions[index].q,
                 answer: value,
-                answerText: labels[value - 1]
+                answerText: questions[index].scale
             };
         });
 
