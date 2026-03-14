@@ -1,661 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- ========== Meta Tags ========== -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dragonfly monitors datasets as they&#039;re updated, evaluating quality with a confidence rating and alerting users (or halting pipelines) if it falls below threshold." />
-    <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="Dragonfly: Data Observability &amp; Quality Monitoring" />
-    <meta itemprop="description" content="Dragonfly monitors datasets as they&#039;re updated, evaluating quality with a confidence rating and alerting users (or halting pipelines) if it falls below threshold." />
-    <meta itemprop="image" content="https://dragonflydatahq.com/assets/img/logo-full.png" />
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://dragonflydatahq.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Dragonfly: Data Observability &amp; Quality Monitoring" />
-    <meta property="og:description" content="Dragonfly monitors datasets as they&#039;re updated, evaluating quality with a confidence rating and alerting users (or halting pipelines) if it falls below threshold." />
-    <meta property="og:image" content="https://dragonflydatahq.com/assets/img/logo-full.png" />
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dragonfly: Data Observability &amp; Quality Monitoring" />
-    <meta name="twitter:description" content="Dragonfly monitors datasets as they&#039;re updated, evaluating quality with a confidence rating and alerting users (or halting pipelines) if it falls below threshold." />
-    <meta name="twitter:image" content="https://dragonflydatahq.com/assets/img/logo-full.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DragonflyDQ is an AI-powered data quality platform with conversational agent Sara, agentic BI, anomaly detection, and proactive monitoring. Know your data is right — before it matters.">
+  <meta itemprop="name" content="DragonflyDQ — AI-Powered Data Quality & Agentic BI">
+  <meta itemprop="description" content="DragonflyDQ is an AI-powered data quality platform with conversational agent Sara, agentic BI, anomaly detection, and proactive monitoring.">
+  <meta itemprop="image" content="https://dragonflydatahq.com/assets/img/logo-full.png">
+  <meta property="og:url" content="https://dragonflydatahq.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DragonflyDQ — AI-Powered Data Quality & Agentic BI">
+  <meta property="og:description" content="DragonflyDQ is an AI-powered data quality platform with conversational agent Sara, agentic BI, anomaly detection, and proactive monitoring.">
+  <meta property="og:image" content="https://dragonflydatahq.com/assets/img/logo-full.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DragonflyDQ — AI-Powered Data Quality & Agentic BI">
+  <meta name="twitter:description" content="DragonflyDQ is an AI-powered data quality platform with conversational agent Sara, agentic BI, anomaly detection, and proactive monitoring.">
+  <meta name="twitter:image" content="https://dragonflydatahq.com/assets/img/logo-full.png">
 
-    <!-- ========== Page Title ========== -->
-    <title>Dragonfly: Data Observability &amp; Quality Monitoring</title>
+  <title>DragonflyDQ — AI-Powered Data Quality & Agentic BI</title>
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 
-    <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-
-    <!-- ========== Start Stylesheet ========== -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="assets/css/themify-icons.css" rel="stylesheet" />
-    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
-    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
-    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
-    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
-    <link href="assets/css/animate.css" rel="stylesheet" />
-    <link href="assets/css/bootsnav.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet">
-    <link href="assets/css/responsive.css" rel="stylesheet" />
-    <!-- ========== End Stylesheet ========== -->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5/html5shiv.min.js"></script>
-      <script src="assets/js/html5/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- ========== Google Fonts ========== -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5LG8T78W');</script>
-    <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5LG8T78W');</script>
 </head>
 
-<body class="dark-layout">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LG8T78W"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body>
+<!-- GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LG8T78W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Preloader Start -->
-    <div class="se-pre-con"></div>
-    <!-- Preloader Ends -->
-
-    <!-- Header 
-    ============================================= -->
-    <header id="home">
-
-        <!-- Start Navigation -->
-        <nav class="navbar bg-gray navbar-default navbar-fixed-light attr-border navbar-fixed dark no-background bootsnav">
-
-            <div class="container">
-
-                <!-- Start Header Navigation -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo-light.png" class="logo" alt="Logo">
-                    </a>
-                </div>
-                <!-- End Header Navigation -->
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="features.html">Features</a>
-                        </li>
-                        <li>
-                            <a href="integrations.html">Integrations</a>
-                        </li>
-                        <li>
-                            <a href="index.html#concepts">Key Concepts</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div>
-
-        </nav>
-        <!-- End Navigation -->
-
-    </header>
-    <!-- End Header -->
-
-    <!-- Start Banner 
-    ============================================= -->
-    <div class="banner-area text-combo top-pad-90 rectangular-shape bg-gray">
-        <div class="item">
-            <div class="box-table">
-                <div class="box-cell">
-                    <div class="container">
-                        <div class="row">
-                            <div class="double-items">
-                                <div class="col-lg-6 info">
-                                    <h2 class="wow fadeInDown" data-wow-duration="1s"><span>No-nonsense</span> Data Quality Monitoring</h2>
-                                    <p class="wow fadeInLeft" data-wow-duration="1.5s">
-                                        Dragonfly Data HQ ensures data integrity and quality in real-time data pipelines.
-                                    </p>
-                                    <a class="btn circle btn-md btn-gradient wow fadeInUp" data-wow-duration="1.8s" id="video-demo-button" href="#">Watch 2-minute Demo<i class="fas fa-plus"></i></a>
-                                    <a class="btn circle btn-md btn-gradient wow fadeInUp" data-wow-duration="1.8s" href="contact.html">Request A Demo<i class="fas fa-plus"></i></a>
-                                </div>
-                                <div class="col-lg-6 thumb wow fadeInRight" data-wow-duration="1s">
-                                    <img loading="lazy" src="assets/img/illustration/1.png" alt="Thumb">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- ==================== NAV ==================== -->
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/img/logo-light.png" alt="DragonflyDQ">
+    </a>
+    <div class="nav-links">
+      <a href="#sara">Sara AI</a>
+      <a href="#features">Features</a>
+      <a href="#integrations">Integrations</a>
+      <a href="tool-dq-maturity.html">DQ Maturity Tool</a>
+      <a href="#contact" class="btn btn-primary btn-sm">Book a Demo</a>
     </div>
-    <!-- End Banner -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-    <div class="youtube-player">
-        <div class="youtube-player-overlay">
-            <div class="youtube-player-popup">
-                <iframe id="video-demo-embedded" src="https://www.youtube.com/embed/tFEjGgVe5Xs?si=xpZSC9hbVv_W-BNB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">AI-Powered Data Quality Platform</div>
+      <h1>Know your data is right.<br><span class="highlight">Before it matters.</span></h1>
+      <p>DragonflyDQ puts data quality control in the hands of the people who understand the data — not the engineers who move it. With AI agent Sara, agentic BI, and proactive monitoring.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Book a Demo</a>
+        <a href="#sara" class="btn btn-outline">Meet Sara &darr;</a>
+      </div>
     </div>
-<!--    &lt;!&ndash; Start Banner-->
-<!--        ============================================= &ndash;&gt;-->
-<!--    <div class="banner-area text-combo top-pad-90 rectangular-shape bg-gray" id = "video-demo">-->
-<!--        <div class="item">-->
-<!--            <div class="box-table">-->
-<!--                <div class="box-cell">-->
-<!--                    <div class="container">-->
-<!--                        <div class="row">-->
-<!--                            <div class="double-items">-->
-<!--                                <iframe width="560" height="315" src="https://www.youtube.com/embed/tFEjGgVe5Xs?si=xpZSC9hbVv_W-BNB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash; End Banner &ndash;&gt;-->
+  </div>
+</section>
 
-    <!-- Start Our Features
-    ============================================= -->
-    <div class="our-features-area wavesshape-bottom carousel-shadow default-padding" id="features">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="thumb wow fadeInRight">
-                        <img loading="lazy" src="assets/img/illustration/2.png" alt="Thumb">
-                    </div>
-                </div>
-                <div class="col-lg-7 info">
-                    <div class="feature-items feature-carousel owl-carousel owl-theme">
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="icon">
-                                <i class="flaticon-monitor"></i>
-                            </div>
-                            <h3>Live Data Analysis</h3>
-                            <p>
-                                Analyze datasets as they are processed, detect issues, and prevent data corruption before it impacts your reports.
-                            </p>
-                            <div class="bottom">
-                                <a class="btn-simple" href="features.html#feature-seamless-integration"><i class="fas fa-angle-right"></i> Learn More</a>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="icon">
-                                <i class="flaticon-analysis-1"></i>
-                            </div>
-                            <h3>Custom Quality Checks</h3>
-                            <p>
-                                Tailor Dragonfly with custom data quality checks and templates to enhance error detection capabilities. 
-                            </p>
-                            <div class="bottom">
-                                <a class="btn-simple" href="features.html#feature-quality-rules-library"><i class="fas fa-angle-right"></i> Learn More</a>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="icon">
-                                <i class="flaticon-data"></i>
-                            </div>
-                            <h3>Data Confidence Ratings</h3>
-                            <p>
-                                Generate comprehensive Data Confidence Reports by performing quality checks on your data.
-                            </p>
-                            <div class="bottom">
-                                <a class="btn-simple" href="features.html#feature-data-integrity"><i class="fas fa-angle-right"></i> Learn More</a>
-                            </div>
-                        </div>
-                        <!-- End Single Item -->
-                    </div>
-                </div>
+<!-- ==================== MEET SARA ==================== -->
+<section class="section bg-card" id="sara">
+  <div class="container">
+    <div class="sara-split">
+      <div class="sara-info fade-in">
+        <span class="section-label">Meet Sara (Saraswati)</span>
+        <h2 class="section-title">Your AI data agent</h2>
+        <p class="section-subtitle">Talk to your databases, build dashboards, explore quality metrics — all through conversation. Sara writes the queries, renders the charts, and lets you verify every step.</p>
+
+        <div class="sara-features">
+          <div class="sara-feature">
+            <h4>Talk to Any Data Source</h4>
+            <p>Query databases, datasets, or your quality metrics in plain English.</p>
+          </div>
+          <div class="sara-feature">
+            <h4>Agentic BI</h4>
+            <p>Pin charts to dashboards. Visit later, see latest data. Question to dashboard in one conversation.</p>
+          </div>
+          <div class="sara-feature">
+            <h4>Full Transparency</h4>
+            <p>Every chart shows its query. Modify and regenerate live. No black boxes.</p>
+          </div>
+          <div class="sara-feature">
+            <h4>File Intelligence</h4>
+            <p>Upload a file, chat with it. Sara writes code, applies changes, you download the result.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Mockup -->
+      <div class="sara-mockup fade-in fade-in-delay-2">
+        <div class="sara-mockup-header">
+          <span>Sara</span>
+          <div class="sara-mockup-dots"><i></i><i></i><i></i></div>
+        </div>
+        <div class="sara-mockup-body">
+          <div class="sara-chat-pane">
+            <div class="chat-msg user">Show me order volume trends for the last 90 days</div>
+            <div class="chat-msg sara">Here's the trend. 23% increase since last quarter — driven mostly by the APAC region.</div>
+            <div class="chat-msg user">Add this to my Sales dashboard</div>
+            <div class="chat-msg sara">Done! Pinned to "Sales Dashboard". It will refresh with latest data on each visit.</div>
+            <div class="chat-input">Ask Sara anything...</div>
+          </div>
+          <div class="sara-viz-pane">
+            <div class="viz-tabs">
+              <span class="active">Chart</span>
+              <span>Query</span>
+              <span>Pin</span>
             </div>
+            <div class="viz-chart">
+              <div class="chart-bar" style="--h: 25%"></div>
+              <div class="chart-bar" style="--h: 35%"></div>
+              <div class="chart-bar" style="--h: 30%"></div>
+              <div class="chart-bar" style="--h: 45%"></div>
+              <div class="chart-bar" style="--h: 40%"></div>
+              <div class="chart-bar" style="--h: 55%"></div>
+              <div class="chart-bar" style="--h: 50%"></div>
+              <div class="chart-bar" style="--h: 65%"></div>
+              <div class="chart-bar" style="--h: 60%"></div>
+              <div class="chart-bar" style="--h: 75%"></div>
+              <div class="chart-bar" style="--h: 70%"></div>
+              <div class="chart-bar" style="--h: 85%"></div>
+            </div>
+            <div class="viz-metric">
+              <span class="value">+23%</span>
+              <span class="label">vs last quarter</span>
+            </div>
+            <div class="viz-success">&#10003; Added to "Sales Dashboard"</div>
+          </div>
         </div>
-        <div class="waveshape">
-            <img loading="lazy" src="assets/img/shape/6.svg" alt="Shape">
-        </div>
+      </div>
     </div>
-    <!-- End Features -->
+  </div>
+</section>
 
-    <!-- Start Services Area
-    ============================================= -->
-    <div class="services-area left-border default-padding bottom-less">
-
-        <!-- Shape Fixed Rotation -->
-        <div class="shape-fixed animation-rotation">
-            <img loading="lazy" src="assets/img/round-shappe.png" alt="Thumb">
-        </div>
-        <!-- Dhape Fixed Rotation -->
-
-        <div class="container">
-            <div class="heading-left">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <h2>
-                            Prominent Features
-                        </h2>
-                    </div>
-                    <div class="col-lg-6 offset-lg-1">
-                        <p>
-                            Discover the robust features that make Dragonfly a top-tier data quality monitoring tool.
-                        </p>
-<!--                    <a class="btn circle btn-md btn-gradient wow fadeInUp" href="#">View All <i class="fas fa-plus"></i></a>-->
-                    </div>
-                </div>
-            </div>
-            <div class="services-items">
-                <div class="row">
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <img loading="lazy" src="assets/img/illustration/feature-data-quality-assurance.png" alt="Thumb">
-                            <h4>Data Quality Assurance</h4>
-                            <p>
-                                Receive instant alerts when data issues occur, ensuring reliable data processing.
-                            </p>
-                            <div class="button">
-                                <a class="btn-standard" href="features.html#feature-data-quality-assurance"><i class="fas fa-angle-right"></i> Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <img loading="lazy" src="assets/img/illustration/feature-data-integrity.png" alt="Thumb">
-                            <h4>Data Integrity</h4>
-                            <p>
-                                Prevent data corruption by halting data processing when issues are detected.
-                            </p>
-                            <div class="button">
-                                <a class="btn-standard" href="features.html#feature-data-integrity"><i class="fas fa-angle-right"></i> Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <img loading="lazy" src="assets/img/illustration/feature-quality-rules-library.png" alt="Thumb">
-                            <h4>Quality Rules Library</h4>
-                            <p>
-                                Choose from a library of quality rules across data sources and stages.
-                            </p>
-                            <div class="button">
-                                <a class="btn-standard" href="features.html#feature-quality-rules-library"><i class="fas fa-angle-right"></i> Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <img loading="lazy" src="assets/img/illustration/feature-seamless-integration.png" alt="Thumb">
-                            <h4>Seamless Integration</h4>
-                            <p>
-                                Easily integrate Dragonfly into existing pipelines using our extensive APIs, and Warehouse and Data Lake integrations.
-                            </p>
-                            <div class="button">
-                                <a class="btn-standard" href="features.html#feature-seamless-integration"><i class="fas fa-angle-right"></i> Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <img loading="lazy" src="assets/img/illustration/feature-data-security.png" alt="Thumb">
-                            <h4>Data Security</h4>
-                            <p>
-                                Choose what access you share with Dragonfly and what Metadata is captured, or use access-less integrations.
-                            </p>
-                            <div class="button">
-                                <a class="btn-standard" href="features.html#feature-data-security"><i class="fas fa-angle-right"></i> Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Item -->
-                    <!-- Single Item -->
-                    <div class="single-item col-lg-4 col-md-6">
-                        <div class="item">
-                            <img loading="lazy" src="assets/img/illustration/feature-event-notifications.png" alt="Thumb">
-                            <h4>Event Notifications</h4>
-                            <p>
-                                Stay informed of the quality issues via SMS, email, or a workflow management system.
-                            </p>
-                            <div class="button">
-                                <a class="btn-standard" href="features.html#feature-event-notifications"><i class="fas fa-angle-right"></i> Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Item -->
-                </div>
-            </div>
-        </div>
+<!-- ==================== DCR — Quality That Travels ==================== -->
+<section class="section bg-blue text-center" id="dcr">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label" style="color: rgba(255,255,255,0.6)">Data Confidence Rating</span>
+      <p class="dcr-quote">
+        "Like a ripple in a pond — <em>it diminishes in amplitude but travels all the way to the edge, never forgetting it was disturbed.</em>"
+      </p>
+      <p class="dcr-explain">
+        When data quality drops in one place, DragonflyDQ's Data Confidence Rating propagates across every connected node. Every downstream report, dashboard, and decision carries the true cost of bad data. Proactive, not reactive.
+      </p>
+      <div class="ripple-container">
+        <div class="ripple-ring"></div>
+        <div class="ripple-ring"></div>
+        <div class="ripple-ring"></div>
+        <div class="ripple-ring"></div>
+      </div>
     </div>
-    <!-- End Services Area -->
+  </div>
+</section>
 
-    <!-- Start Our About
-    ============================================= -->
-    <div class="about-area default-padding-top text-center bg-gray" id="concepts">
-        <div class="container">
-            <div class="about-items">
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2">
-                        <div class="heading">
-                            <h4>Key Concepts</h4>
-                            <h2>
-                                Understand the core concepts that power Dragonfly's High Quality Data monitoring.
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-1">
-                        <div class="content">
-                            <p>
-                                
-                            </p>
-                        </div>
-                        <div class="center-tabs">
-                            <ul id="tabs" class="nav nav-tabs">
-                                <li class="nav-item">
-                                    <a href="" data-target="#tab1" data-toggle="tab" class="active nav-link">Component</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" data-target="#tab2" data-toggle="tab" class="nav-link">Component Relations</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" data-target="#tab3" data-toggle="tab" class="nav-link">Pipeline</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" data-target="#tab4" data-toggle="tab" class="nav-link">Health Check</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="" data-target="#tab5" data-toggle="tab" class="nav-link">Data Confidence Rating</a>
-                                </li>
-                            </ul>
-                            <div id="tabsContent" class="tab-content wow fadeInUp" data-wow-delay="0.5s">
-                                <div id="tab1" class="tab-pane fade active show">
-                                    <div class="row align-center">
-                                        <div class="col-lg-7 col-md-12 info">
-                                            <h3>Individual steps in data processing, or the different states of the data like processes, ingested data, processed data, and more</h3>
-                                            <p>
-                                                Each data processing step is identified as a process. Each stage the data goes through, like ingestion, processed and report is identified as a component. Each type of component has expected behaviour and quality check types in Dragonfly. 
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-5 col-md-12 thumb">
-                                            <img loading="lazy" src="assets/img/illustration/concepts-component.png" alt="Thumb">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="tab2" class="tab-pane fade">
-                                    <div class="row align-center">
-                                        <div class="col-lg-7 col-md-12 info">
-                                            <h3>Components interconnect based on dependency order to ensure smooth data flow</h3>
-                                            <p>
-                                                Relationships between the components show the interdependence of the components fot the purpose of calculating the quality. This is by nature the inverse order of execution represented by the orchestrator tools like Apache Airflow.
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-5 col-md-12 thumb">
-                                            <img loading="lazy" src="assets/img/illustration/concepts-component-relations.png" alt="Thumb">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="tab3" class="tab-pane fade">
-                                    <div class="row align-center">
-                                        <div class="col-lg-7 col-md-12 info">
-                                            <h3>Represents your data transformation process, composed of various components</h3>
-                                            <p>
-                                                A pipeline is a logical representation of the data processing pipeline, represented as a DAG. Pipelines in Dragonfly are more nuanced than those in orchestration tools like Apache Airflow, in the sense that they also represent logica groups and stages.
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-5 col-md-12 thumb">
-                                            <img loading="lazy" src="assets/img/illustration/concepts-pipeline.png" alt="Thumb">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="tab4" class="tab-pane fade">
-                                    <div class="row align-center">
-                                        <div class="col-lg-7 col-md-12 info">
-                                            <h3>Tests that validate the state of processes or data, associated with components</h3>
-                                            <p>
-                                                As tests, they are executable expectations of the data quality. There is a library of checks to choose from. There are some built-in checks based on the component type. And it is possible to write your own.
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-5 col-md-12 thumb">
-                                            <img loading="lazy" src="assets/img/illustration/concepts-health-check.png" alt="Thumb">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="tab5" class="tab-pane fade">
-                                    <div class="row align-center">
-                                        <div class="col-lg-7 col-md-12 info">
-                                            <h3>Comprehensive reports generated by health checks, providing insights into your pipeline's health</h3>
-                                            <p>
-                                                A quality rating generated by Dragonfly based on the checks applied. It is a comprehensive metrics calculated by weighted resolution of ratings of all dependencies and checks applied.
-                                            </p>
-                                        </div>
-                                        <div class="col-lg-5 col-md-12 thumb">
-                                            <img loading="lazy" src="assets/img/illustration/concepts-health-report.png" alt="Thumb">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- ==================== AI-POWERED QUALITY ==================== -->
+<section class="section bg-purple" id="ai">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label" style="color: rgba(255,255,255,0.5)">AI-Powered Quality</span>
+      <p class="punchline">
+        We don't use AI to check quality.<br>
+        <span class="dim">We use AI to decide what quality</span> should be.
+      </p>
+      <div class="ai-stats">
+        <div class="ai-stat">
+          <div class="number">40+</div>
+          <div class="desc">Detection algorithms</div>
         </div>
+        <div class="ai-stat">
+          <div class="number">6</div>
+          <div class="desc">Algorithm categories</div>
+        </div>
+        <div class="ai-stat">
+          <div class="number">100%</div>
+          <div class="desc">Deterministic results</div>
+        </div>
+      </div>
+      <div class="ai-bullets">
+        <div class="ai-bullet">Statistical and probabilistic models for distribution-based anomalies</div>
+        <div class="ai-bullet">Proximity-based detection for outlier identification in clusters</div>
+        <div class="ai-bullet">Neural networks — autoencoders, variational models, adversarial detection</div>
+        <div class="ai-bullet">Ensemble methods combining multiple detectors for robust results</div>
+        <div class="ai-bullet">Configure through conversation with Sara — no ML expertise required</div>
+        <div class="ai-bullet">AI guides the what. Deterministic algorithms verify the results. No hallucinated scores.</div>
+      </div>
     </div>
-    <!-- End Our About -->
+  </div>
+</section>
 
-    <!-- Start Work Process Area
-    ============================================= -->
-    <div class="work-process-area bg-gray default-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="site-heading text-center">
-                        <h2>
-                            How Dragonfly Works
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="works-process-items text-center">
-                <div class="row">
-                    <!-- Single Item -->
-                    <div class="col-lg-4 single-item">
-                        <div class="item">
-                            <div class="icon">
-                                <i class="flaticon-data-collection"></i>
-                                <span>01</span>
-                            </div>
-                            <div class="info">
-                                <h4>Import Data Pipelines</h4>
-                                <p>
-                                    Import the processing stages as components and connect them to build pipelines.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-
-                    <!-- Single Item -->
-                    <div class="col-lg-4 single-item">
-                        <div class="item">
-                            <div class="icon">
-                                <i class="flaticon-problem"></i>
-                                <span>02</span>
-                            </div>
-                            <div class="info">
-                                <h4>Define Health Checks</h4>
-                                <p>
-                                    Choose form the library, ask the Dragonfly GPT or Write your own checks.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-
-                    <!-- Single Item -->
-                    <div class="col-lg-4 single-item">
-                        <div class="item">
-                            <div class="icon">
-                                <i class="flaticon-cloud-data"></i>
-                                <span>03</span>
-                            </div>
-                            <div class="info">
-                                <h4>Enjoy Better Data Quality</h4>
-                                <p>
-                                    Experience heightened confidence in your data with our precision-assured reports.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Single Item -->
-                </div>
-            </div>
-        </div>
+<!-- ==================== DATA QUALITY MONITORING ==================== -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label">Data Quality Monitoring</span>
+      <h2 class="section-title">Everything you need to trust your data</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Proactive monitoring, quality scoring, pipeline control, and alerting — with detailed analytics that rival SonarQube for code quality.</p>
     </div>
-    <!-- End Work Process Area -->
 
-    <!-- Star Footer
-    ============================================= -->
-    <footer>
-        <div class="container">
-            <div class="f-items default-padding">
-                <div class="row">
-                    <div class="equal-height col-lg-4 col-md-4 item">
-                        <div class="f-item about">
-                            <img src="assets/img/logo-light.png" alt="Logo">
-                            <p>
-                                A Data Quality Monitoring platform, built by Upshot Ideas Technology Lab LLP.
-                            </p>
-                        </div>
-                    </div>
+    <div class="grid grid-3">
+      <div class="card fade-in">
+        <div class="card-icon blue">&#9670;</div>
+        <h4>Confidence Scores</h4>
+        <p>Every dataset is rated and tracked over time. Watch quality trends per component, check, and pipeline — like SonarQube for data.</p>
+      </div>
+      <div class="card fade-in fade-in-delay-1">
+        <div class="card-icon purple">&#9632;</div>
+        <h4>Pipeline Gates</h4>
+        <p>Auto-halt pipelines when quality drops below your threshold. Stop bad data before it reaches downstream systems.</p>
+      </div>
+      <div class="card fade-in fade-in-delay-2">
+        <div class="card-icon teal">&#9733;</div>
+        <h4>Rules & Templates</h4>
+        <p>Pre-built quality rules library plus custom templates. Apply a template across similar datasets — same checks, same expectations, everywhere.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon teal">&#8644;</div>
+        <h4>Clone & Reuse</h4>
+        <p>Clone checks across components and datasets. Build once, apply many. Save time when onboarding new data sources.</p>
+      </div>
+      <div class="card fade-in fade-in-delay-1">
+        <div class="card-icon blue">&#9998;</div>
+        <h4>SME Control</h4>
+        <p>Subject matter experts configure quality right from the browser. No engineering bottleneck, no dev cycles. Like Google Tag Manager — for data quality.</p>
+      </div>
+      <div class="card fade-in fade-in-delay-2">
+        <div class="card-icon purple">&#9889;</div>
+        <h4>Alerts Everywhere</h4>
+        <p>Slack, email, PagerDuty, New Relic, SMS, webhooks, and more. Get notified the moment something goes wrong.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-                    <div class="equal-height col-lg-4 col-md-4 item">
-                        <div class="f-item link">
-                            <h4 class="widget-title">Useful Links</h4>
-                            <ul>
-                                <li>
-                                    <a href="#">Home</a>
-                                </li>
-                                <li>
-                                    <a href="features.html">Features</a>
-                                </li>
-                                <li>
-                                    <a href="index.html#concepts">Key Concepts</a>
-                                </li>
-                                <li>
-                                    <a href="https://nikhilwanpal.in/category/dragonfly/">Blog</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+<!-- ==================== BUILT-IN BI ==================== -->
+<section class="section bg-card">
+  <div class="container text-center">
+    <div class="fade-in">
+      <span class="section-label">Built-in BI</span>
+      <h2 class="section-title">Explore, visualize, and assess — all in one place</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">A full-featured BI tool embedded inside DragonflyDQ. Build dashboards on your data and your quality metrics. Explore, visualize, assess, and QA — under one roof.</p>
+      <a href="#contact" class="btn btn-outline">See it in action</a>
+    </div>
+  </div>
+</section>
 
-                    <div class="equal-height col-lg-4 col-md-4 item">
-                        <div class="f-item contact">
-                            <h4 class="widget-title">Contact Info</h4>
-                            <p>
-                                If you wish to experience the heightened confidence in your data reports, reach out to us.
-                            </p>
-                            <div class="address">
-                                <ul>
-                                    <li>
-                                        <strong>Email: </strong><a href="mailto:info@upshotideas.com">info@upshotideas.com</a>
-                                    </li>
-                                    <li>
-                                        <strong>Contact: </strong><a href="tel:+919960790196">+91-996-079-0196</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <ul class="social">
-                                <li class="linkedin">
-                                    <a href="https://www.linkedin.com/company/99978574"><i class="fab fa-linkedin-in"></i></a>
-                                </li>
-                                <li class="twitter">
-                                    <a href="https://twitter.com/nikhilwanpal"><i class="fab fa-twitter"></i></a>
-                                </li>
-<!--                                <li class="instagram">-->
-<!--                                    <a href="#"><i class="fab fa-instagram"></i></a>-->
-<!--                                </li>-->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+<!-- ==================== INTEGRATIONS ==================== -->
+<section class="section" id="integrations">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label">Integrations</span>
+      <h2 class="section-title">Connects to your entire stack</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Data warehouses, lakes, streams, orchestrators, and alerting tools — DragonflyDQ plugs into what you already use.</p>
+    </div>
+
+    <div class="integration-filters fade-in" style="justify-content:center;">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="datasource">Data Sources</button>
+      <button class="filter-btn" data-filter="codeCheck">Code-Based</button>
+      <button class="filter-btn" data-filter="orchestrator">Orchestrators</button>
+      <button class="filter-btn" data-filter="alerts">Alerts</button>
+      <button class="filter-btn" data-filter="misc">Misc</button>
+    </div>
+
+    <div class="integration-grid fade-in">
+      <div class="integration-item" data-category="datasource">
+        <img src="assets/img/integrations/aws-redshift.png" alt="AWS Redshift" loading="lazy">
+        <span>AWS Redshift</span>
+      </div>
+      <div class="integration-item" data-category="datasource">
+        <img src="assets/img/integrations/google-bigquery.webp" alt="Google BigQuery" loading="lazy">
+        <span>Google BigQuery</span>
+      </div>
+      <div class="integration-item" data-category="datasource">
+        <img src="assets/img/integrations/snowflake.svg" alt="Snowflake" loading="lazy">
+        <span>Snowflake</span>
+      </div>
+      <div class="integration-item" data-category="datasource">
+        <img src="assets/img/integrations/apache-hudi.png" alt="Apache Hudi" loading="lazy">
+        <span>Apache Hudi</span>
+      </div>
+      <div class="integration-item" data-category="datasource">
+        <img src="assets/img/integrations/azure-sql-db.svg" alt="Azure SQL" loading="lazy">
+        <span>Azure SQL</span>
+      </div>
+      <div class="integration-item" data-category="datasource">
+        <img src="assets/img/integrations/PostgreSQL.svg" alt="PostgreSQL" loading="lazy">
+        <span>PostgreSQL</span>
+      </div>
+      <div class="integration-item" data-category="datasource">
+        <img src="assets/img/integrations/apache-kafka.svg" alt="Apache Kafka" loading="lazy">
+        <span>Apache Kafka</span>
+      </div>
+      <div class="integration-item" data-category="datasource">
+        <img src="assets/img/integrations/aws-cloudwatch.png" alt="AWS CloudWatch" loading="lazy">
+        <span>AWS CloudWatch</span>
+      </div>
+      <div class="integration-item" data-category="datasource">
+        <img src="assets/img/integrations/azure-synapse.svg" alt="Azure Synapse" loading="lazy">
+        <span>Azure Synapse</span>
+      </div>
+      <div class="integration-item" data-category="datasource">
+        <img src="assets/img/integrations/powered-by-mysql.png" alt="MySQL" loading="lazy">
+        <span>MySQL</span>
+      </div>
+      <div class="integration-item" data-category="datasource">
+        <img src="assets/img/integrations/aws-athena.svg" alt="AWS Athena" loading="lazy">
+        <span>AWS Athena</span>
+      </div>
+      <div class="integration-item" data-category="datasource">
+        <img src="assets/img/integrations/amazon-s3.png" alt="AWS S3" loading="lazy">
+        <span>AWS S3</span>
+      </div>
+      <div class="integration-item" data-category="datasource codeCheck">
+        <img src="assets/img/integrations/aws-lambda.png" alt="AWS Lambda" loading="lazy">
+        <span>AWS Lambda</span>
+      </div>
+      <div class="integration-item" data-category="datasource codeCheck">
+        <img src="assets/img/integrations/google-cloud-functions.svg" alt="Google Cloud Functions" loading="lazy">
+        <span>Cloud Functions</span>
+      </div>
+      <div class="integration-item" data-category="orchestrator">
+        <img src="assets/img/integrations/apache-airflow.png" alt="Apache Airflow" loading="lazy">
+        <span>Apache Airflow</span>
+      </div>
+      <div class="integration-item" data-category="orchestrator">
+        <img src="assets/img/integrations/scheduling.png" alt="Cron" loading="lazy">
+        <span>Cron</span>
+      </div>
+      <div class="integration-item" data-category="alerts">
+        <img src="assets/img/integrations/email.png" alt="Email" loading="lazy">
+        <span>Email</span>
+      </div>
+      <div class="integration-item" data-category="alerts">
+        <img src="assets/img/integrations/slack.svg" alt="Slack" loading="lazy">
+        <span>Slack</span>
+      </div>
+      <div class="integration-item" data-category="alerts">
+        <img src="assets/img/integrations/sms.png" alt="SMS" loading="lazy">
+        <span>SMS</span>
+      </div>
+      <div class="integration-item" data-category="alerts">
+        <img src="assets/img/integrations/new-relic.svg" alt="New Relic" loading="lazy">
+        <span>New Relic</span>
+      </div>
+      <div class="integration-item" data-category="alerts">
+        <img src="assets/img/integrations/pager-duty.png" alt="PagerDuty" loading="lazy">
+        <span>PagerDuty</span>
+      </div>
+      <div class="integration-item" data-category="alerts">
+        <img src="assets/img/integrations/splunk-on-call.svg" alt="Splunk On-Call" loading="lazy">
+        <span>Splunk On-Call</span>
+      </div>
+      <div class="integration-item" data-category="alerts">
+        <img src="assets/img/integrations/aws-sns.svg" alt="AWS SNS" loading="lazy">
+        <span>AWS SNS</span>
+      </div>
+      <div class="integration-item" data-category="alerts">
+        <img src="assets/img/integrations/webhooks.jpg" alt="Webhooks" loading="lazy">
+        <span>Webhooks</span>
+      </div>
+      <div class="integration-item" data-category="misc">
+        <img src="assets/img/integrations/openai-logomark.svg" alt="OpenAI" loading="lazy">
+        <span>OpenAI</span>
+      </div>
+      <div class="integration-item" data-category="datasource codeCheck alerts orchestrator misc">
+        <img src="assets/img/integrations/more.png" alt="And More" loading="lazy">
+        <span>And Many More...</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== HOW IT WORKS ==================== -->
+<section class="section bg-card" id="how-it-works">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-title">Three steps to trusted data</h2>
+    </div>
+
+    <div class="steps fade-in">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Connect</h3>
+        <p>Point DragonflyDQ at your databases, warehouses, streams, or files. API-first, works with your existing stack.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Configure</h3>
+        <p>Use Sara to set up rules conversationally, apply templates, or configure manually. SMEs can do it — no code required.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Monitor</h3>
+        <p>Continuous quality scores, anomaly detection, alerts, and dashboards. Proactive quality, always on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MATURITY TOOL TEASER ==================== -->
+<section class="section text-center">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-label">Free Tool</span>
+      <h2 class="section-title">How mature is your data quality practice?</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Take our 2-minute assessment. Get an instant score and tailored guidance.</p>
+      <a href="tool-dq-maturity.html" class="btn btn-primary">Take the Assessment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section class="section bg-card" id="contact">
+  <div class="container">
+    <div class="text-center fade-in">
+      <span class="section-label">Get Started</span>
+      <h2 class="section-title">See DragonflyDQ in action</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Book a demo or drop us a message. We'll show you how DragonflyDQ fits your data stack.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-booking fade-in">
+        <h3>Book a Demo</h3>
+        <div class="tidycal-embed" data-path="upshotideas/30-minute-meeting" style="min-height:400px;"></div>
+        <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
+      </div>
+
+      <div class="contact-form fade-in fade-in-delay-1">
+        <h3>Or Send a Message</h3>
+        <form action="https://formsubmit.co/info@upshotideas.com" method="POST">
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://dragonflydatahq.com/contact-thankyou.html">
+
+          <div class="form-group">
+            <input class="form-control" name="name" placeholder="Your Name *" type="text" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input class="form-control" name="email" placeholder="Email *" type="email" required>
             </div>
-            <div class="footer-bottom">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p>&copy; Copyright 2024. All Rights Reserved by <a href="http://upshotideas.com">Upshot Ideas Technology Lab LLP</a></p>
-                    </div>
-                    <div class="col-lg-6 text-right link">
-                        <ul>
-                            <li>
-                                <a href="terms.html">Terms</a>
-                            </li>
-                            <li>
-                                <a href="privacy.html">Privacy</a>
-                            </li>
-                            <li>
-                                <a href="support.html">Support</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="form-group">
+              <input class="form-control" name="phone" placeholder="Phone" type="text">
             </div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" placeholder="How can we help? *" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <img src="assets/img/logo-light.png" alt="DragonflyDQ">
+        <p>AI-powered data quality platform with agentic BI. Built by Upshot Ideas Technology Lab LLP.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#sara">Sara AI Agent</a></li>
+          <li><a href="#features">Quality Monitoring</a></li>
+          <li><a href="#integrations">Integrations</a></li>
+          <li><a href="tool-dq-maturity.html">DQ Maturity Tool</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="https://nikhilwanpal.in/category/dragonfly/">Blog</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="mailto:info@upshotideas.com">info@upshotideas.com</a></li>
+          <li><a href="tel:+919960790196">+91-996-079-0196</a></li>
+        </ul>
+        <div class="footer-social" style="margin-top:16px;">
+          <a href="https://www.linkedin.com/company/99978574" aria-label="LinkedIn">in</a>
+          <a href="https://twitter.com/nikhilwanpal" aria-label="Twitter">X</a>
         </div>
-        <!-- Shape -->
-        <div class="footer-shape" style="background-image: url(assets/img/shape/1.svg);"></div>
-        <!-- End Shape -->
-    </footer>
-    <!-- End Footer-->
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 DragonflyDQ. All Rights Reserved by <a href="http://upshotideas.com">Upshot Ideas Technology Lab LLP</a></p>
+      <div class="footer-bottom-links">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-    <!-- jQuery Frameworks
-    ============================================= -->
-    <script src="assets/js/jquery-1.12.4.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/equal-height.min.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/modernizr.custom.13711.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/progress-bar.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/count-to.js"></script>
-    <script src="assets/js/YTPlayer.min.js"></script>
-    <script src="assets/js/circle-progress.js"></script>
-    <script src="assets/js/bootsnav.js"></script>
-    <script src="assets/js/main.js"></script>
-
+<script src="main.js"></script>
 </body>
 </html>

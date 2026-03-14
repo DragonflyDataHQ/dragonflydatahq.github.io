@@ -2,244 +2,117 @@
 <html lang="en">
 
 <head>
-    <!-- ========== Meta Tags ========== -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dragonfly monitors datasets as they&#039;re updated, evaluating quality with a confidence rating and alerting users (or halting pipelines) if it falls below threshold." />
-    <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="Data QA Maturity Tool | Dragonfly: Data Observability &amp; Quality Monitoring" />
-    <meta itemprop="description" content="Dragonfly monitors datasets as they&#039;re updated, evaluating quality with a confidence rating and alerting users (or halting pipelines) if it falls below threshold." />
-    <meta itemprop="image" content="https://dragonflydatahq.com/assets/img/logo-full.png" />
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://dragonflydatahq.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Data QA Maturity Tool | Dragonfly: Data Observability &amp; Quality Monitoring" />
-    <meta property="og:description" content="Dragonfly monitors datasets as they&#039;re updated, evaluating quality with a confidence rating and alerting users (or halting pipelines) if it falls below threshold." />
-    <meta property="og:image" content="https://dragonflydatahq.com/assets/img/logo-full.png" />
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Data QA Maturity Tool | Dragonfly: Data Observability &amp; Quality Monitoring" />
-    <meta name="twitter:description" content="Dragonfly monitors datasets as they&#039;re updated, evaluating quality with a confidence rating and alerting users (or halting pipelines) if it falls below threshold." />
-    <meta name="twitter:image" content="https://dragonflydatahq.com/assets/img/logo-full.png" />
-
-    <!-- ========== Page Title ========== -->
-    <title>Data QA Maturity Tool | Dragonfly: Data Observability &amp; Quality Monitoring</title>
-
-    <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-
-    <!-- ========== Start Stylesheet ========== -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="assets/css/themify-icons.css" rel="stylesheet" />
-    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
-    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
-    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
-    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
-    <link href="assets/css/animate.css" rel="stylesheet" />
-    <link href="assets/css/bootsnav.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet">
-    <link href="assets/css/responsive.css" rel="stylesheet" />
-    <!-- ========== End Stylesheet ========== -->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="assets/js/html5/html5shiv.min.js"></script>
-    <script src="assets/js/html5/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- ========== Google Fonts ========== -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5LG8T78W');</script>
-    <!-- End Google Tag Manager -->
-
-    <style>
-        .slider-labels {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.85rem;
-            margin-top: 0.25rem;
-        }
-        .question-card {
-            transition: all 0.3s ease;
-        }
-        .question-card:hover {
-            box-shadow: 0 0 0 2px #3b82f6;
-        }
-        .w-100 {
-            width: 100%;
-        }
-        .p-6 {
-            padding: 1.5rem;
-            margin-top: 2rem;
-            margin-bottom: 0;
-        }
-        /* Ensure alert-danger text is visible in dark mode */
-        body.dark-layout .alert-danger, body.dark-layout .alert-danger * {
-            color: #721c24 !important;
-        }
-        /* Ensure alert-success text is dark and readable */
-        .alert-success, .alert-success * {
-            color: #155724 !important;
-        }
-
-        .alert-warning, .alert-warning * {
-            color: #856404 !important;
-        }
-
-        /* Pulse animation for urgent alert */
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(220,53,69,0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(220,53,69,0); }
-            100% { box-shadow: 0 0 0 0 rgba(220,53,69,0); }
-        }
-        .alert-urgent {
-            animation: pulse 1.5s infinite;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="DragonflyDQ is an AI-powered data quality platform with conversational agent Sara, agentic BI, anomaly detection, and proactive monitoring.">
+<meta itemprop="name" content="DQ Maturity Tool | DragonflyDQ">
+<meta itemprop="image" content="https://dragonflydatahq.com/assets/img/logo-full.png">
+<meta property="og:url" content="https://dragonflydatahq.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DQ Maturity Tool | DragonflyDQ">
+<meta property="og:image" content="https://dragonflydatahq.com/assets/img/logo-full.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DQ Maturity Tool | DragonflyDQ">
+<meta name="twitter:image" content="https://dragonflydatahq.com/assets/img/logo-full.png">
+<title>DQ Maturity Tool | DragonflyDQ</title>
+<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5LG8T78W');</script>
 </head>
 
-<body class="dark-layout">
+<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LG8T78W"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<!-- Preloader Start -->
-<div class="se-pre-con"></div>
-<!-- Preloader Ends -->
-
-<!-- Header
-============================================= -->
-<header id="home">
-
-    <!-- Start Navigation -->
-    <nav class="navbar bg-gray navbar-default navbar-fixed-light attr-border navbar-fixed dark no-background bootsnav">
-
-        <div class="container">
-
-            <!-- Start Header Navigation -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo-light.png" class="logo" alt="Logo">
-                </a>
-            </div>
-            <!-- End Header Navigation -->
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbar-menu">
-                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="features.html">Features</a>
-                    </li>
-                    <li>
-                        <a href="integrations.html">Integrations</a>
-                    </li>
-                    <li>
-                        <a href="index.html#concepts">Key Concepts</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div>
-
-    </nav>
-    <!-- End Navigation -->
-
-</header>
-<!-- End Header -->
-
-<!-- Start Start With Us Area
-============================================= -->
-<div class="start-us-area overflow-hidden bg-gradient text-light default-padding" id="feature-data-quality-assurance">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2 page-title-area">
-                <div class="site-heading text-center">
-                    <h2>How Mature Is Your Data Quality Practice?</h2>
-                    <h5>Slide through the questions to rate your readiness. Get an instant score and tailored guidance.</h5>
-                </div>
-            </div>
-        </div>
-        <div class="row align-center">
-            <div class="col-lg-12">
-                <form id="assessmentForm" class="d-flex flex-column gap-4">
-                    <div id="questionsContainer" class="d-flex flex-column gap-4"></div>
-                    <div class="p-4 mt-md-4 rounded border question-card">
-                        <h4 class="mb-3">Please tell a bit about yourself</h4>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="userName" class="form-label fw-semibold">Full Name *</label>
-                                <input type="text" class="form-control" id="userName" name="userName" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="userEmail" class="form-label fw-semibold">Email Address *</label>
-                                <input type="email" class="form-control" id="userEmail" name="userEmail" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="userCompany" class="form-label fw-semibold">Company *</label>
-                                <input type="text" class="form-control" id="userCompany" name="userCompany" required>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="userDesignation" class="form-label fw-semibold">Designation *</label>
-                                <input type="text" class="form-control" id="userDesignation" name="userDesignation" required>
-                            </div>
-                        </div>
-                        <div id="userDetailsError" class="alert alert-danger mt-3 d-none">
-                            Please fill in all required fields before calculating your score.
-                        </div>
-                    </div>
-                </form>
-
-                <div class="text-center mt-4">
-                    <button type="button" id="calculateBtn" onclick="calculateScore()" class="btn btn-primary btn-lg shadow">
-                        Calculate My Score
-                    </button>
-                    <div id="loadingSpinner" class="d-none mt-3">
-                        <div class="spinner-border text-primary" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                        <p class="mt-2">Processing your assessment...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row align-center">
-            <div class="col-lg-12">
-                <div class="info wow fadeInLeft">
-                    <div id="resultSection" class="mt-5 d-none text-center">
-                        <h2 class="fs-1 fw-bold mb-4">Your Score: <span id="scoreValue" class="text-primary"></span>/10</h2>
-                        <p id="recommendation" class="fs-4 fw-medium mb-4"></p>
-
-                        <div id="contactDetails" class="alert alert-danger d-flex flex-column align-items-center gap-2 p-4 d-none mx-auto rounded shadow border-4 border-danger">
-                            <p id="contactHeading" class="mb-2 fw-bold text-danger-emphasis fs-4"><i class="fa fa-exclamation-triangle me-2"></i>Urgent Action Required!</p>
-                            <p id="contactMessage" class="mb-1 text-danger-emphasis">Contact our data quality specialists immediately:</p>
-                            <p class="mb-0"><span class="fw-semibold">Email:</span> <a href="mailto:info@upshotideas.com?subject=Need%20Help%20With%20Data%20Quality" class="text-danger text-decoration-underline">info@upshotideas.com</a></p>
-                            <p class="mb-0"><span class="fw-semibold">Phone:</span> <a href="tel:+919960790196" class="text-danger text-decoration-underline">+91-996-079-0196</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/img/logo-light.png" alt="DragonflyDQ">
+    </a>
+    <div class="nav-links">
+      <a href="index.html#sara">Sara AI</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#integrations">Integrations</a>
+      <a href="tool-dq-maturity.html">DQ Maturity Tool</a>
+      <a href="index.html#contact" class="btn btn-primary btn-sm">Book a Demo</a>
     </div>
-</div>
-<!-- End Start With Us Area -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="tool-hero">
+  <div class="container" style="text-align:center;">
+    <h2>How Mature Is Your Data Quality Practice?</h2>
+    <p>Slide through the questions to rate your readiness. Get an instant score and tailored guidance.</p>
+  </div>
+</section>
+
+<section class="tool-body">
+  <div class="container">
+    <form id="assessmentForm">
+      <div id="questionsContainer"></div>
+
+      <div class="question-card tool-user-fields">
+        <h4>Please tell a bit about yourself</h4>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="userName">Full Name *</label>
+            <input type="text" class="form-control" id="userName" name="userName" required>
+          </div>
+          <div class="form-group">
+            <label for="userEmail">Email Address *</label>
+            <input type="email" class="form-control" id="userEmail" name="userEmail" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="userCompany">Company *</label>
+            <input type="text" class="form-control" id="userCompany" name="userCompany" required>
+          </div>
+          <div class="form-group">
+            <label for="userDesignation">Designation *</label>
+            <input type="text" class="form-control" id="userDesignation" name="userDesignation" required>
+          </div>
+        </div>
+        <div id="userDetailsError" class="tool-alert danger" style="display:none;">
+          Please fill in all required fields before calculating your score.
+        </div>
+      </div>
+    </form>
+
+    <div style="text-align:center; margin-top:32px;">
+      <button type="button" id="calculateBtn" onclick="calculateScore()" class="btn btn-primary">
+        Calculate My Score
+      </button>
+      <div id="loadingSpinner" style="display:none; margin-top:16px;">
+        <p>Processing your assessment...</p>
+      </div>
+    </div>
+
+    <div id="resultSection" class="tool-result" style="display:none; text-align:center; margin-top:48px;">
+      <h2>Your Score: <span id="scoreValue"></span>/10</h2>
+      <p id="recommendation" style="font-size:1.2rem; margin:16px 0;"></p>
+
+      <div id="contactDetails" class="tool-alert" style="display:none; max-width:500px; margin:24px auto; padding:24px;">
+        <p id="contactHeading" style="font-weight:700; font-size:1.2rem;"></p>
+        <p id="contactMessage"></p>
+        <p><strong>Email:</strong> <a href="mailto:info@upshotideas.com?subject=Need%20Help%20With%20Data%20Quality">info@upshotideas.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+919960790196">+91-996-079-0196</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <script>
     const scales = {
         frequency: ["1 - Never", "2 - Rarely", "3 - Sometimes", "4 - Often", "5 - Always"],
@@ -290,50 +163,34 @@
         }
     ];
 
-
-
     const questionsContainer = document.getElementById("questionsContainer");
-
-    // // Create a container for questions
-    // const questionsContainer = document.createElement('div');
-    // questionsContainer.id = 'questionsContainer';
-    // questionsContainer.className = 'd-flex flex-column gap-4';
 
     questions.forEach((qConfig, index) => {
         questionsContainer.innerHTML += `
-        <div class="p-4 mt-md-4 rounded border question-card">
-          <label class="d-block fw-semibold fs-4 mb-2">${index + 1}. ${qConfig.q}</label>
-          <input type="range" min="1" max="5" value="1" step="1" class="w-100 slider" name="q${index + 1}" />
-          <div class="slider-labels mt-2">
+        <div class="question-card">
+          <label style="display:block; font-weight:600; font-size:1.1rem; margin-bottom:8px;">${index + 1}. ${qConfig.q}</label>
+          <input type="range" min="1" max="5" value="1" step="1" style="width:100%;" name="q${index + 1}" />
+          <div class="slider-labels">
             ${qConfig.scale.map(label => `<span>${label}</span>`).join('')}
           </div>
         </div>
       `;
     });
 
-    // Append questions container after the user details section
-    // questionsContainer.appendChild(questionsContainer);
-
     function calculateScore() {
-        // Validate user details first
         const userName = document.getElementById('userName').value.trim();
         const userEmail = document.getElementById('userEmail').value.trim();
         const userCompany = document.getElementById('userCompany').value.trim();
         const userDesignation = document.getElementById('userDesignation').value.trim();
         const userDetailsError = document.getElementById('userDetailsError');
 
-        // Check if all required fields are filled
         if (!userName || !userEmail || !userCompany || !userDesignation) {
-            userDetailsError.classList.remove('d-none');
-            // Scroll to the error message
-            // userDetailsError.scrollIntoView({ behavior: "smooth" });
-            return; // Stop execution if validation fails
+            userDetailsError.style.display = 'block';
+            return;
         }
 
-        // Hide error message if all fields are filled
-        userDetailsError.classList.add('d-none');
+        userDetailsError.style.display = 'none';
 
-        // Collect all question answers
         const sliders = document.querySelectorAll('input[type="range"]');
         let total = 0;
         const questionAnswers = {};
@@ -348,52 +205,47 @@
             };
         });
 
-        // Calculate score
-        // Formula is Final Score = ((Raw Score - RawMin) / (RawMax - RawMin)) * (FinalMax - FinalMin) + FinalMin
         const score = (1 + 9 * ((total - sliders.length) / (4 * sliders.length))).toFixed(2);
 
-        // Display the score and recommendations immediately
         document.getElementById("scoreValue").textContent = score;
-        document.getElementById("resultSection").classList.remove("d-none");
+        document.getElementById("resultSection").style.display = 'block';
 
         const rec = document.getElementById("recommendation");
         const contact = document.getElementById("contactDetails");
         const contactHeading = document.getElementById("contactHeading");
         const contactMessage = document.getElementById("contactMessage");
 
-        // Remove all alert color classes and urgent animation
-        contact.classList.remove('alert-danger', 'alert-warning', 'alert-success', 'alert-urgent', 'border-danger', 'border-warning', 'border-success');
+        // Reset alert classes
+        contact.className = 'tool-alert';
 
         if (score < 7) {
-            rec.textContent = "⚠️ Your data quality maturity is critically low, but fret not! You have taken the first step towards improving it!";
-            contact.classList.remove("d-none");
-            contact.classList.add('alert-danger', 'border-danger', 'alert-urgent');
-            contactHeading.innerHTML = '<i class="fa fa-exclamation-triangle me-2"></i>Urgent Action Required!';
+            rec.textContent = "Your data quality maturity is critically low, but fret not! You have taken the first step towards improving it!";
+            contact.style.display = 'block';
+            contact.classList.add('danger', 'urgent');
+            contactHeading.textContent = 'Urgent Action Required!';
             contactMessage.textContent = 'Contact our data quality specialists immediately:';
         } else if (score < 8) {
-            rec.textContent = "⚠️ Your data quality strategy needs improvement. A specialist should assist you.";
-            contact.classList.remove("d-none");
-            contact.classList.add('alert-danger', 'border-danger', 'alert-urgent');
-            contactHeading.innerHTML = '<i class="fa fa-lightbulb-o me-2"></i>For further improvement, reach out to us!';
+            rec.textContent = "Your data quality strategy needs improvement. A specialist should assist you.";
+            contact.style.display = 'block';
+            contact.classList.add('danger', 'urgent');
+            contactHeading.textContent = 'For further improvement, reach out to us!';
             contactMessage.textContent = 'Our specialists can help you get to the next level:';
         } else if (score < 9.5) {
-            rec.textContent = "✅ You're in a strong position. You can probably make the improvements on your own.";
-            contact.classList.remove("d-none");
-            contact.classList.add('alert-warning', 'border-warning');
-            contactHeading.innerHTML = '<i class="fa fa-comments me-2"></i>Let\'s Chat!';
+            rec.textContent = "You're in a strong position. You can probably make the improvements on your own.";
+            contact.style.display = 'block';
+            contact.classList.add('warning');
+            contactHeading.textContent = "Let's Chat!";
             contactMessage.textContent = 'But we can take you to the next level, faster; And would be happy to discuss, please reach out here:';
         } else {
-            rec.textContent = "🎉 Amazing! Your data quality monitoring is excellent!";
-            contact.classList.remove("d-none");
-            contact.classList.add('alert-success', 'border-success');
-            contactHeading.innerHTML = '<i class="fa fa-graduation-cap me-2"></i>Teach Us Your Ways!';
+            rec.textContent = "Amazing! Your data quality monitoring is excellent!";
+            contact.style.display = 'block';
+            contact.classList.add('success');
+            contactHeading.textContent = 'Teach Us Your Ways!';
             contactMessage.textContent = 'Hm, we would love to learn from you, would you teach us?';
         }
 
-        // 👇 Smooth scroll to result
         document.getElementById("resultSection").scrollIntoView({ behavior: "smooth", block: "center" });
 
-        // Prepare data for ajax call
         const formData = {
             userName: userName,
             userEmail: userEmail,
@@ -404,146 +256,78 @@
             _subject: `Data Quality Maturity Assessment - Score: ${score}/10`
         };
 
-        // Show loading indicator and disable button
         const calculateBtn = document.getElementById('calculateBtn');
         const loadingSpinner = document.getElementById('loadingSpinner');
 
         calculateBtn.disabled = true;
-        loadingSpinner.classList.remove('d-none');
+        loadingSpinner.style.display = 'block';
 
-        //this is the ajax call:
-        $.ajax({
-            url: "https://formsubmit.co/ajax/351ae045bce7d712efe80fe137df66f1",
+        fetch("https://formsubmit.co/ajax/351ae045bce7d712efe80fe137df66f1", {
             method: "POST",
-            data: formData,
-            dataType: "json",
-            success: function(response) {
-                // Hide loading spinner and re-enable button
-                loadingSpinner.classList.add('d-none');
-                calculateBtn.disabled = false;
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
             },
-            error: function(error) {
-                // Hide loading spinner and re-enable button
-                loadingSpinner.classList.add('d-none');
-                calculateBtn.disabled = false;
-            }
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            loadingSpinner.style.display = 'none';
+            calculateBtn.disabled = false;
+        })
+        .catch(error => {
+            loadingSpinner.style.display = 'none';
+            calculateBtn.disabled = false;
         });
     }
 </script>
 
-<!-- Star Footer
-============================================= -->
-<footer>
-    <div class="container">
-        <div class="f-items default-padding">
-            <div class="row">
-                <div class="equal-height col-lg-4 col-md-4 item">
-                    <div class="f-item about">
-                        <img src="assets/img/logo-light.png" alt="Logo">
-                        <p>
-                            A Data Quality Monitoring platform, built by Upshot Ideas Technology Lab LLP.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="equal-height col-lg-4 col-md-4 item">
-                    <div class="f-item link">
-                        <h4 class="widget-title">Useful Links</h4>
-                        <ul>
-                            <li>
-                                <a href="#">Home</a>
-                            </li>
-                            <li>
-                                <a href="features.html">Features</a>
-                            </li>
-                            <li>
-                                <a href="index.html#concepts">Key Concepts</a>
-                            </li>
-                            <li>
-                                <a href="https://nikhilwanpal.in/category/dragonfly/">Blog</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="equal-height col-lg-4 col-md-4 item">
-                    <div class="f-item contact">
-                        <h4 class="widget-title">Contact Info</h4>
-                        <p>
-                            If you wish to experience the heightened confidence in your data reports, reach out to us.
-                        </p>
-                        <div class="address">
-                            <ul>
-                                <li>
-                                    <strong>Email: </strong><a href="mailto:info@upshotideas.com">info@upshotideas.com</a>
-                                </li>
-                                <li>
-                                    <strong>Contact: </strong><a href="tel:+919960790196">+91-996-079-0196</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <ul class="social">
-                            <li class="linkedin">
-                                <a href="https://www.linkedin.com/company/99978574"><i class="fab fa-linkedin-in"></i></a>
-                            </li>
-                            <li class="twitter">
-                                <a href="https://twitter.com/nikhilwanpal"><i class="fab fa-twitter"></i></a>
-                            </li>
-<!--                                <li class="instagram">-->
-<!--                                    <a href="#"><i class="fab fa-instagram"></i></a>-->
-<!--                                </li>-->
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <img src="assets/img/logo-light.png" alt="DragonflyDQ">
+        <p>AI-powered data quality platform with agentic BI. Built by Upshot Ideas Technology Lab LLP.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="index.html#sara">Sara AI Agent</a></li>
+          <li><a href="index.html#features">Quality Monitoring</a></li>
+          <li><a href="index.html#integrations">Integrations</a></li>
+          <li><a href="tool-dq-maturity.html">DQ Maturity Tool</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="https://nikhilwanpal.in/category/dragonfly/">Blog</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="mailto:info@upshotideas.com">info@upshotideas.com</a></li>
+          <li><a href="tel:+919960790196">+91-996-079-0196</a></li>
+        </ul>
+        <div class="footer-social" style="margin-top:16px;">
+          <a href="https://www.linkedin.com/company/99978574" aria-label="LinkedIn">in</a>
+          <a href="https://twitter.com/nikhilwanpal" aria-label="Twitter">X</a>
         </div>
-        <div class="footer-bottom">
-            <div class="row">
-                <div class="col-lg-6">
-                    <p>&copy; Copyright 2024. All Rights Reserved by <a href="http://upshotideas.com">Upshot Ideas Technology Lab LLP</a></p>
-                </div>
-                <div class="col-lg-6 text-right link">
-                    <ul>
-                        <li>
-                            <a href="terms.html">Terms</a>
-                        </li>
-                        <li>
-                            <a href="privacy.html">Privacy</a>
-                        </li>
-                        <li>
-                            <a href="support.html">Support</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-    <!-- Shape -->
-    <div class="footer-shape" style="background-image: url(assets/img/shape/1.svg);"></div>
-    <!-- End Shape -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 DragonflyDQ. All Rights Reserved by <a href="http://upshotideas.com">Upshot Ideas Technology Lab LLP</a></p>
+      <div class="footer-bottom-links">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+      </div>
+    </div>
+  </div>
 </footer>
-<!-- End Footer-->
 
-<!-- jQuery Frameworks
-============================================= -->
-<script src="assets/js/jquery-1.12.4.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/equal-height.min.js"></script>
-<script src="assets/js/jquery.appear.js"></script>
-<script src="assets/js/jquery.easing.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/modernizr.custom.13711.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/progress-bar.min.js"></script>
-<script src="assets/js/isotope.pkgd.min.js"></script>
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/count-to.js"></script>
-<script src="assets/js/YTPlayer.min.js"></script>
-<script src="assets/js/circle-progress.js"></script>
-<script src="assets/js/bootsnav.js"></script>
-<script src="assets/js/main.js"></script>
-
+<script src="main.js"></script>
 </body>
 </html>
