@@ -1,7 +1,7 @@
 {
   "name": "dragonfly-website",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "DragonflyDQ website",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -9,18 +9,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "npm-watch",
-    "build": "mkdir -p docs\n\tcp -r ./src/assets docs/\n\tcp -r ./src/root-files/* docs/\n\tnpx hbs -D ./src/data/integrations.json -o ./docs ./src/pages/integrations.hbs\n\tcp ./src/pages/privacy.html ./docs/privacy.html\n\tcp ./src/pages/contact.html ./docs/contact.html\n\tcp ./src/pages/terms.html ./docs/terms.html\n\tcp ./src/pages/features.html ./docs/features.html\n\tcp ./src/pages/support.html ./docs/support.html\n\tcp ./src/pages/contact-thankyou.html ./docs/contact-thankyou.html\n\tcp ./src/pages/index.html ./docs/index.html\n\tcp ./src/pages/404.html ./docs/404.html\n\tcp ./src/pages/tool-dq-maturity.html ./docs/tool-dq-maturity.html"
+    "build": "make build"
   },
   "watch": {
     "build": {
       "patterns": ["src/**/"],
-      "extensions": "js,css,json,png,html,hbs,gif,svg"
+      "extensions": "js,css,json,png,html,gif,svg"
     }
   },
   "author": "",
   "license": "All Rights Reserved.",
   "dependencies": {
-    "hbs-cli": "1.4.1",
     "npm-watch": "0.13.0"
   }
 }
