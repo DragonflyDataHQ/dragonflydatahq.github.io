@@ -1,0 +1,42 @@
+# DragonflyDQ
+
+> Agentic data quality platform with built-in BI. Built by Upshot Ideas Technology Lab LLP.
+
+DragonflyDQ is a data quality monitoring platform that puts control in the hands of subject matter experts, not just data engineers. It features an AI conversational agent called Sara, agentic BI capabilities, anomaly detection with 25+ algorithms, and proactive quality monitoring.
+
+## Core Capabilities
+
+- **Sara AI Agent**: Conversational interface to query databases, build dashboards, explore quality metrics, and configure rules in plain English. Supports file uploads for data analysis.
+- **Agentic BI**: Pin charts from conversations to dashboards. Dashboards refresh with latest data on each visit. Full transparency with visible queries.
+- **Data Confidence Rating (DCR)**: Quality scores that propagate across connected data nodes. When quality drops upstream, every downstream report, dashboard, and decision reflects the true impact.
+- **Anomaly Detection**: 25+ detection algorithms across 6 categories including statistical models, proximity-based detection, deep learning, and ensemble methods. Pure deterministic scoring.
+- **Quality Monitoring**: Confidence scores per dataset, pipeline gates to auto-halt bad data, pre-built rules library, templates, and clone/reuse across components.
+- **Alerting**: Slack, Microsoft Teams, email, PagerDuty, OpsGenie, Datadog, WhatsApp, Discord, SMS, webhooks, and more.
+
+## Integrations
+
+### Data Sources
+AWS Redshift, Google BigQuery, Snowflake, Apache Hudi, Azure SQL, PostgreSQL, Apache Kafka, AWS CloudWatch, Azure Synapse, MySQL, AWS Athena, AWS S3, Oracle, SQL Server, Databricks, ClickHouse, MariaDB, and any JDBC-compatible database.
+
+### Code-Based Checks
+AWS Lambda, Google Cloud Functions, Azure Functions.
+
+### Orchestrators
+Apache Airflow, Cron scheduling.
+
+### AI Vendors
+OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure OpenAI, OpenRouter, Ollama (local LLMs).
+
+## Pricing
+
+- **SaaS**: Cloud-hosted, priced by quality checks per month.
+- **On-Premise**: Self-hosted, flat annual pricing.
+
+## Links
+
+- Website: https://dragonflydatahq.com
+- Blog: https://nikhilwanpal.in/category/dragonfly/
+- Support: https://dragonflydatahq.com/support.html
+- DQ Maturity Assessment Tool: https://dragonflydatahq.com/tool-dq-maturity.html
+- Contact: info@upshotideas.com
+- Book a Demo: https://dragonflydatahq.com/#contact
