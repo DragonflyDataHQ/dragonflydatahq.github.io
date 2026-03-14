@@ -1,11 +1,11 @@
 /* ============================================
-   DragonflyDQ — Modern Design System
+   DragonflyDQ - Modern Design System
    ============================================ */
 
 :root {
-  --bg: #0a0b10;
-  --bg-card: #12141f;
-  --bg-elevated: #1a1c2a;
+  --bg: #111320;
+  --bg-card: #171929;
+  --bg-elevated: #1e2035;
   --border: rgba(255,255,255,0.06);
   --blue: #437eeb;
   --blue-hover: #5c94f0;
@@ -98,12 +98,17 @@ p { color: var(--text-secondary); font-size: 1.1rem; }
 .btn-outline {
   background: transparent;
   color: var(--text);
-  border: 2px solid var(--border);
+  border: 2px solid rgba(255,255,255,0.2);
 }
 .btn-outline:hover {
   border-color: var(--blue);
   color: var(--blue);
   transform: translateY(-2px);
+}
+.btn-primary.btn-sm {
+  background: var(--blue);
+  color: #fff;
+  border: none;
 }
 .btn-sm {
   padding: 10px 24px;
@@ -123,7 +128,7 @@ p { color: var(--text-secondary); font-size: 1.1rem; }
   transition: all 0.3s;
 }
 .nav.scrolled {
-  background: rgba(10,11,16,0.95);
+  background: rgba(17,19,32,0.95);
   backdrop-filter: blur(20px);
   padding: 12px 0;
   border-bottom: 1px solid var(--border);

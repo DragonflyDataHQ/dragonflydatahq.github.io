@@ -1,4 +1,4 @@
-/* DragonflyDQ — Main JS */
+/* DragonflyDQ - Main JS */
 
 document.addEventListener('DOMContentLoaded', () => {
   // Sticky nav
